@@ -17,6 +17,12 @@ For privacy, account, or data deletion requests, contact us through the channels
 
 ## Common Questions
 
+### Data and credential safety
+
+1. SSH passwords are session-only and are not persisted in local saved profiles.
+2. AI API keys are stored in platform secure storage (for example iOS Keychain / Android Keystore-backed storage).
+3. Release builds reduce sensitive authentication/credential logging.
+
 ### SSH connection fails
 
 1. Verify host/port/username/auth method.

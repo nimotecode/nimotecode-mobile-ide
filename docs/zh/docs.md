@@ -33,5 +33,6 @@
 | --- | --- |
 | FAQ | [打开](/zh/docs/faq) |
 | 支持 | [打开](/zh/support) |
+| 账号删除 | [打开](/zh/account-delete) |
 | 隐私政策 | [打开](/zh/privacy) |
 | 服务条款 | [打开](/zh/terms) |

@@ -33,5 +33,6 @@ This is the product documentation hub for NimoteCode.
 | --- | --- |
 | FAQ | [Open](/docs/faq) |
 | Support | [Open](/support) |
+| Account Deletion | [Open](/account-delete) |
 | Privacy Policy | [Open](/privacy) |
 | Terms of Service | [Open](/terms) |

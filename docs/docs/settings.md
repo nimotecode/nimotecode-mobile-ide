@@ -32,6 +32,7 @@ Settings lets you shape NimoteCode into a stable, long-session mobile developmen
 
 Settings includes direct entries to:
 
+- [Account Deletion](/account-delete)
 - [Privacy Policy](/privacy)
 - [Terms of Service](/terms)
 

@@ -38,6 +38,7 @@ export default defineConfig({
           { text: 'Features', link: '/features' },
           { text: 'Documentation', link: '/docs/quick-start' },
           { text: 'Support', link: '/support' },
+          { text: 'Account Deletion', link: '/account-delete' },
           { text: 'Privacy', link: '/privacy' },
           { text: 'Terms', link: '/terms' }
         ],
@@ -94,6 +95,7 @@ export default defineConfig({
           { text: '功能', link: '/zh/features' },
           { text: '文档', link: '/zh/docs/quick-start' },
           { text: '支持', link: '/zh/support' },
+          { text: '账号删除', link: '/zh/account-delete' },
           { text: '隐私政策', link: '/zh/privacy' },
           { text: '服务条款', link: '/zh/terms' }
         ],

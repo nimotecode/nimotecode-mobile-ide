@@ -21,6 +21,7 @@ Tune each profile for your usage style:
 - Verify responses in AI Chat
 - Confirm AI Agent can execute with your selected profile
 - Keep prompts and limits aligned with cost/performance goals
+- API keys are stored via platform secure storage (for example iOS Keychain / Android Keystore-backed storage)
 
 ## SSH Configuration Strategy
 
@@ -35,6 +36,7 @@ Recommended:
 - Use key-based auth for production servers
 - Separate high-risk and low-risk environments
 - Validate access rights before running tasks
+- If password auth is used, treat it as session-only: password is used in-memory and not persisted in local SSH profile storage
 
 ## Tasks Configuration Strategy
 

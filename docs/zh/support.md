@@ -15,6 +15,12 @@
 
 ## 常见问题
 
+### 数据与凭据安全
+
+1. SSH 密码仅用于会话期内存，不会持久化保存到本地连接配置。
+2. AI API Key 使用系统级安全存储（如 iOS Keychain / Android Keystore 支撑存储）。
+3. 发布版本会减少敏感认证/凭据日志输出。
+
 ### SSH 连接失败
 
 1. 检查 host/port/username/认证方式。

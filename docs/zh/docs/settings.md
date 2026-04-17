@@ -32,6 +32,7 @@
 
 设置页可直接访问：
 
+- [账号删除](/zh/account-delete)
 - [隐私政策](/zh/privacy)
 - [服务条款](/zh/terms)
 

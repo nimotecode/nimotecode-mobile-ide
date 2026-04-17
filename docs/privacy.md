@@ -34,6 +34,11 @@ Depending on usage, NimoteCode stores:
 - App settings and preferences (for example theme, language, editor and keyboard preferences)
 - Workflow metadata and chat/agent history in workspace `.nimote` paths (local and/or remote, depending on your workflow)
 
+SSH password handling:
+
+- SSH passwords are used only in-memory during active connection/authentication.
+- SSH passwords are **not** persisted in local profile storage.
+
 ### 2.4 AI Configuration and AI Request Data
 
 If you configure AI providers, we process:
@@ -43,9 +48,18 @@ If you configure AI providers, we process:
 
 AI requests are sent only to the provider endpoints you configure.
 
+AI API credential storage:
+
+- AI API keys are stored using platform secure storage mechanisms (for example iOS Keychain / Android Keystore-backed storage).
+- AI API keys are no longer stored in plain app preference storage.
+
 ### 2.5 Operational Diagnostics
 
 We may process limited operational logs needed for reliability, troubleshooting, and security.
+
+Diagnostics minimization:
+
+- In release builds, authentication and credential logs are reduced and sensitive fields are masked or omitted.
 
 ## 3. How We Use Data
 
@@ -91,11 +105,19 @@ You can:
 
 - Manage or remove local app/workspace data directly
 - Remove AI provider configurations to stop sending new requests to that provider
-- Request account/privacy assistance (including deletion requests where applicable) via support contact channels
+- Initiate account deletion in-app via **Settings -> Delete account**
+- Use our web deletion page when you cannot sign in: [Account Deletion](/account-delete)
+- Request account/privacy assistance via support contact channels
 
 ## 8. Security
 
 We apply reasonable technical and organizational safeguards. No method of transmission or storage can be guaranteed 100% secure.
+
+Current safeguards include:
+
+- Secure storage for AI API credentials (platform secure storage)
+- No persistent local storage of SSH passwords in connection profiles
+- Reduced and de-identified sensitive logging in release builds
 
 ## 9. Children
 
