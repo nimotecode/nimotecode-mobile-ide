@@ -12,7 +12,7 @@ NimoteCode는 iOS와 Android에서 사용 가능합니다.
 
 ## Google Play
 
-[![Google Play에서 다운로드](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.nimotecode)
+[![Google Play에서 다운로드](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.nimote.nimotecode)
 
 ## 시스템 요구 사항
 

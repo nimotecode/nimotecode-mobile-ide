@@ -12,7 +12,7 @@ NimoteCode está disponible para iOS y Android.
 
 ## Google Play
 
-[![Obtener en Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.nimotecode)
+[![Obtener en Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.nimote.nimotecode)
 
 ## Requisitos del sistema
 

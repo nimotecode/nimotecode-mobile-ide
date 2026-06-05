@@ -6,7 +6,7 @@ title: 下载安装 | NimoteCode
 
 ## Android
 
-- Google Play: https://play.google.com/store/apps/details?id=com.nimotecode
+- Google Play: https://play.google.com/store/apps/details?id=com.nimote.nimotecode
 
 ## iOS
 
