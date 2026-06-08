@@ -2,24 +2,33 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'NimoteCode',
-  description: 'Mobile-first IDE for real delivery - SSH workspace, terminal, Source Control, LSP/Debug, AI Agent, and Timeline diagnostics.',
+  description: 'NimoteCode is a mobile SSH developer workspace with code editor, terminal, Git, AI agent, LSP, debugger, tasks, timeline diagnostics, and sync/cache.',
   base: '/',
   lang: 'en-US',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'NimoteCode - Ship Production Fixes from Your Phone' }],
-    ['meta', { property: 'og:description', content: 'Mobile-first IDE for real delivery - SSH workspace, terminal, Source Control, LSP/Debug, AI Agent, and Timeline diagnostics.' }],
+    ['meta', { property: 'og:title', content: 'NimoteCode - Mobile SSH Developer Workspace' }],
+    ['meta', { property: 'og:description', content: 'Edit files, run terminals, review Git changes, ask AI, and diagnose remote projects from phone or tablet.' }],
     ['meta', { property: 'og:url', content: 'https://nimotecode.com' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: 'NimoteCode - Ship Production Fixes from Your Phone' }],
-    ['meta', { name: 'twitter:description', content: 'Mobile-first IDE for real delivery' }],
+    ['meta', { name: 'twitter:title', content: 'NimoteCode - Mobile SSH Developer Workspace' }],
+    ['meta', { name: 'twitter:description', content: 'A mobile SSH workspace for editor, terminal, Git, AI, LSP, debug, tasks, timeline, and sync/cache workflows.' }],
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'NimoteCode',
+      applicationCategory: 'DeveloperApplication',
+      operatingSystem: 'iOS, Android',
+      description: 'Mobile SSH developer workspace with code editor, terminal, Git, AI agent, LSP, debugger, tasks, timeline diagnostics, and sync/cache.',
+      offers: { '@type': 'Offer', category: 'Freemium' }
+    })],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
-    ['link', { 
-      rel: 'stylesheet', 
-      href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&display=swap' 
+    ['link', {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&display=swap'
     }]
   ],
 
@@ -64,44 +73,64 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Features', link: '/features' },
-          { text: 'Documentation', link: '/docs/quick-start' },
-          { text: 'Support', link: '/support' },
-          { text: 'Account Deletion', link: '/account-delete' },
-          { text: 'Privacy', link: '/privacy' },
-          { text: 'Terms', link: '/terms' }
+          { text: 'Pro', link: '/pro' },
+          { text: 'Docs', link: '/docs/quick-start' },
+          { text: 'Download', link: '/download' },
+          { text: 'Support', link: '/support' }
         ],
         sidebar: {
           '/': [
             {
-              text: 'Getting Started',
+              text: 'Start',
               items: [
                 { text: 'Quick Start', link: '/docs/quick-start' },
                 { text: 'Introduction', link: '/introduction' },
                 { text: 'Features', link: '/features' },
+                { text: 'Pro', link: '/pro' },
                 { text: 'Download', link: '/download' }
               ]
             },
             {
-              text: 'Documentation',
+              text: 'Use Cases',
               items: [
-                { text: 'SSH Remote Development', link: '/docs/ssh' },
-                { text: 'Terminal Usage', link: '/docs/terminal' },
-                { text: 'Source Control Workflow', link: '/docs/source-control' },
-                { text: 'AI Assistant', link: '/docs/ai' },
-                { text: 'LSP Panel', link: '/docs/lsp' },
-                { text: 'Debug Panel', link: '/docs/debug' },
-                { text: 'Tasks Panel', link: '/docs/tasks' },
-                { text: 'Timeline Panel', link: '/docs/timeline' },
-                { text: 'Sync / Cache Panel', link: '/docs/sync-cache' },
-                { text: 'Settings', link: '/docs/settings' },
-                { text: 'Configuration', link: '/docs/configuration' }
+                { text: 'Remote Hotfix', link: '/use-cases/remote-hotfix' },
+                { text: 'On-call Diagnostics', link: '/use-cases/on-call-diagnostics' },
+                { text: 'AI Agent Workflows', link: '/use-cases/ai-agent' }
               ]
             },
             {
-              text: 'Help',
+              text: 'Daily Workflow',
               items: [
+                { text: 'SSH Workspace', link: '/docs/ssh' },
+                { text: 'Editor', link: '/docs/editor' },
+                { text: 'Terminal', link: '/docs/terminal' },
+                { text: 'Search', link: '/docs/search' },
+                { text: 'Source Control', link: '/docs/source-control' },
+                { text: 'Tasks', link: '/docs/tasks' }
+              ]
+            },
+            {
+              text: 'AI and Diagnostics',
+              items: [
+                { text: 'AI Assistant', link: '/docs/ai' },
+                { text: 'LSP', link: '/docs/lsp' },
+                { text: 'Debug', link: '/docs/debug' },
+                { text: 'Timeline', link: '/docs/timeline' },
+                { text: 'Sync / Cache', link: '/docs/sync-cache' }
+              ]
+            },
+            {
+              text: 'Reference',
+              items: [
+                { text: 'Account and Subscription', link: '/docs/account-subscription' },
+                { text: 'Security and Safety', link: '/docs/security' },
+                { text: 'Settings', link: '/docs/settings' },
+                { text: 'Configuration', link: '/docs/configuration' },
                 { text: 'FAQ', link: '/docs/faq' },
-                { text: 'Support', link: '/support' }
+                { text: 'Support', link: '/support' },
+                { text: 'Privacy', link: '/privacy' },
+                { text: 'Terms', link: '/terms' },
+                { text: 'Account Deletion', link: '/account-delete' }
               ]
             }
           ]
