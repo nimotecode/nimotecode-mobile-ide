@@ -45,7 +45,7 @@ export default defineConfig({
     // Social links
     socialLinks: [
       { icon: 'github', link: 'https://github.com/nimotecode' },
-      { icon: 'twitter', link: 'https://twitter.com/nimotecode' },
+      { icon: 'twitter', link: 'https://x.com/nimotecode' },
       { icon: 'discord', link: 'https://discord.gg/nimotecode' }
     ],
 

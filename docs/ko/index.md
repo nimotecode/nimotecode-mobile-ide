@@ -25,6 +25,10 @@ hero:
       <a href="/ko/docs/quick-start" class="home-page-btn secondary">3분 시작</a>
       <a href="/pro" class="home-page-btn ghost">Pro 비교</a>
     </div>
+    <div class="home-page-status-note">
+      <strong>곧 출시됩니다. 기대해주세요.</strong>
+      <span>최신 소식은 <a href="https://x.com/nimotecode" target="_blank" rel="noreferrer">X</a> 에서 확인하세요.</span>
+    </div>
     <div class="home-page-stat-row">
       <div class="home-page-stat">
         <strong>SSH 우선</strong>
@@ -103,37 +107,7 @@ hero:
   </div>
 </section>
 
-<section class="home-page-section dense alt">
-  <p class="home-page-eyebrow">핵심 흐름</p>
-  <h2 class="home-page-section-title">서버 연결부터 배포 완료까지</h2>
-  <p class="home-page-section-copy">NimoteCode는 워크스페이스, 에디터, 터미널, Git, AI, 진단, 동기화라는 실제 작업 경로에 맞춰 설계되었습니다.</p>
-  <div class="home-page-grid">
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">01</span>연결</div>
-      <p class="home-page-card-desc">저장된 프로필, 비밀번호/키 인증, 루트 경로 선택을 지원하며 로컬 또는 SSH 워크스페이스를 열 수 있습니다.</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">02</span>편집</div>
-      <p class="home-page-card-desc">탭형 편집기에서 커서 추적, 실행 취소/재실행, 클립보드, 아웃라인, 모바일 키보드 제어를 사용할 수 있습니다.</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">03</span>실행</div>
-      <p class="home-page-card-desc">터미널 세션에서 명령을 실행하고, 출력을 검색하며, 끊김 후 복구하고, Pro로 여러 터미널을 정리할 수 있습니다.</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">04</span>검색</div>
-      <p class="home-page-card-desc">원격 파일 내용을 검색합니다. 대소문자 및 정규식을 지원하며, 무료는 제한적이고 Pro는 무제한입니다.</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">05</span>커밋 <span class="home-page-badge">Pro</span></div>
-      <p class="home-page-card-desc">차이점 검토, 브랜치 관리, 변경 보관, 커밋, pull/push/fetch, Git AI를 통한 변경 이해가 가능합니다.</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">06</span>진단 <span class="home-page-badge">Pro 도구</span></div>
-      <p class="home-page-card-desc">LSP, 디버거, Timeline AI, Tasks, Sync/Cache로 모바일에서도 더 깊은 제어를 할 수 있습니다.</p>
-    </div>
-  </div>
-</section>
+<PricingFeatureSystem lang="ko" />
 
 <section class="home-page-section dense">
   <p class="home-page-eyebrow">사용 사례</p>
@@ -154,35 +128,6 @@ hero:
       <p class="home-page-card-desc">AI Chat으로 설명을 보고, AI Agent로 다단계 작업을 실행합니다. 사용량 제한, 안전 검사, Pro 무제한 접근을 지원합니다.</p>
       <p class="home-page-card-link"><a href="/use-cases/ai-agent">AI 워크플로 보기 →</a></p>
     </div>
-  </div>
-</section>
-
-<section class="home-page-section dense alt">
-  <p class="home-page-eyebrow">요금제</p>
-  <h2 class="home-page-section-title">핵심 워크스페이스부터 시작하고, 필요할 때 확장하세요.</h2>
-  <table class="home-page-table">
-    <thead>
-      <tr>
-        <th>기능</th>
-        <th>무료</th>
-        <th>Pro</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>로컬 / SSH 워크스페이스</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>탭형 편집기와 기본 터미널</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>AI Chat과 설정된 제공자</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>AI Agent 실행</td><td>사용량 기반</td><td>무제한</td></tr>
-      <tr><td>원격 콘텐츠 검색</td><td>사용량 기반</td><td>무제한</td></tr>
-      <tr><td>Git 쓰기 워크플로와 Git AI</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>멀티 터미널 워크플로</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>LSP 진단과 코드 액션</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>디버거, Timeline AI, Sync/Cache, 고급 Tasks</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-    </tbody>
-  </table>
-  <div class="home-page-actions home-page-actions-left">
-    <a href="/pro" class="home-page-btn primary">Pro 기능 보기</a>
-    <a href="/ko/features" class="home-page-btn secondary">전체 기능 맵 보기</a>
   </div>
 </section>
 

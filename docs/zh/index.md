@@ -25,6 +25,10 @@ hero:
       <a href="/zh/docs/quick-start" class="home-page-btn secondary">3 分钟上手</a>
       <a href="/pro" class="home-page-btn ghost">对比 Pro</a>
     </div>
+    <div class="home-page-status-note">
+      <strong>正在上线中，敬请期待。</strong>
+      <span>欢迎关注我们的 <a href="https://x.com/nimotecode" target="_blank" rel="noreferrer">X</a> 获取最新动态。</span>
+    </div>
     <div class="home-page-stat-row">
       <div class="home-page-stat">
         <strong>SSH 优先</strong>
@@ -103,37 +107,7 @@ hero:
   </div>
 </section>
 
-<section class="home-page-section dense alt">
-  <p class="home-page-eyebrow">核心流程</p>
-  <h2 class="home-page-section-title">从连接服务器到完成发布</h2>
-  <p class="home-page-section-copy">NimoteCode 围绕真实工作路径设计：工作区、编辑器、终端、Git、AI、诊断和同步。</p>
-  <div class="home-page-grid">
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">01</span>连接</div>
-      <p class="home-page-card-desc">打开本地项目，或通过 SSH 连接工作区，支持已保存配置、密码/密钥认证和根路径选择。</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">02</span>编辑</div>
-      <p class="home-page-card-desc">使用带标签页的代码编辑器，支持光标跟踪、撤销/重做、剪贴板、代码大纲和移动端键盘控制。</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">03</span>运行</div>
-      <p class="home-page-card-desc">在终端会话中执行命令、搜索输出、断线后恢复，并用 Pro 组织多终端工作。</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">04</span>查找</div>
-      <p class="home-page-card-desc">在远程文件内容中搜索，支持大小写和正则。免费版有额度限制，Pro 解锁无限搜索。</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">05</span>提交 <span class="home-page-badge">Pro</span></div>
-      <p class="home-page-card-desc">审查差异、管理分支、暂存变更、提交、拉取、推送、获取，并用 Git AI 理解改动。</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">06</span>诊断 <span class="home-page-badge">Pro 工具</span></div>
-      <p class="home-page-card-desc">LSP、调试器、Timeline AI、Tasks 和 Sync/Cache，让移动端也能处理更深层的项目控制。</p>
-    </div>
-  </div>
-</section>
+<PricingFeatureSystem lang="zh" />
 
 <section class="home-page-section dense">
   <p class="home-page-eyebrow">使用场景</p>
@@ -154,35 +128,6 @@ hero:
       <p class="home-page-card-desc">用 AI Chat 做解释，用 AI Agent 完成多步骤工作，包含用量限制、安全检查和 Pro 无限访问。</p>
       <p class="home-page-card-link"><a href="/use-cases/ai-agent">探索 AI 工作流 →</a></p>
     </div>
-  </div>
-</section>
-
-<section class="home-page-section dense alt">
-  <p class="home-page-eyebrow">方案</p>
-  <h2 class="home-page-section-title">先从核心工作区开始，需要更强能力时再升级。</h2>
-  <table class="home-page-table">
-    <thead>
-      <tr>
-        <th>能力</th>
-        <th>免费版</th>
-        <th>Pro</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>本地与 SSH 工作区</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>标签页代码编辑器与基础终端</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>AI Chat 与已配置提供商</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>AI Agent 运行</td><td>按量</td><td>无限</td></tr>
-      <tr><td>远程内容搜索</td><td>按量</td><td>无限</td></tr>
-      <tr><td>Git 写入工作流与 Git AI</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>多终端工作流</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>LSP 诊断与代码操作</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>调试器、Timeline AI、Sync/Cache、高级 Tasks</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-    </tbody>
-  </table>
-  <div class="home-page-actions home-page-actions-left">
-    <a href="/pro" class="home-page-btn primary">查看 Pro 功能</a>
-    <a href="/zh/features" class="home-page-btn secondary">查看完整能力图</a>
   </div>
 </section>
 

@@ -25,6 +25,10 @@ hero:
       <a href="/docs/quick-start" class="home-page-btn secondary">Start in 3 minutes</a>
       <a href="/pro" class="home-page-btn ghost">Compare Pro</a>
     </div>
+    <div class="home-page-status-note">
+      <strong>Launching soon.</strong>
+      <span>Stay tuned and follow our latest updates on <a href="https://x.com/nimotecode" target="_blank" rel="noreferrer">X</a>.</span>
+    </div>
     <div class="home-page-stat-row">
       <div class="home-page-stat">
         <strong>SSH-first</strong>
@@ -103,37 +107,7 @@ hero:
   </div>
 </section>
 
-<section class="home-page-section dense alt">
-  <p class="home-page-eyebrow">Core workflow</p>
-  <h2 class="home-page-section-title">From server access to shipped change</h2>
-  <p class="home-page-section-copy">NimoteCode is built around the actual path the app implements: workspace, editor, terminal, Git, AI, diagnostics, and sync.</p>
-  <div class="home-page-grid">
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">01</span>Connect</div>
-      <p class="home-page-card-desc">Open a local project or connect to an SSH workspace with saved profiles, password or key auth, and selected root paths.</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">02</span>Edit</div>
-      <p class="home-page-card-desc">Use a tabbed code editor with cursor tracking, undo/redo, clipboard support, outline access, and mobile keyboard controls.</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">03</span>Run</div>
-      <p class="home-page-card-desc">Run commands in terminal sessions, search output, recover after reconnects, and organize terminal work into tabs with Pro.</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">04</span>Find</div>
-      <p class="home-page-card-desc">Search remote file contents with case-sensitive and regex options. Free usage is metered; Pro unlocks unrestricted remote search.</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">05</span>Commit <span class="home-page-badge">Pro</span></div>
-      <p class="home-page-card-desc">Review diffs, manage branches, stash changes, commit, pull, push, fetch, and use Git AI for change understanding.</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">06</span>Diagnose <span class="home-page-badge">Pro tools</span></div>
-      <p class="home-page-card-desc">Use LSP, debugger, timeline AI, tasks, and sync/cache workflows when mobile work needs deeper project control.</p>
-    </div>
-  </div>
-</section>
+<PricingFeatureSystem lang="en" />
 
 <section class="home-page-section dense">
   <p class="home-page-eyebrow">Use cases</p>
@@ -154,35 +128,6 @@ hero:
       <p class="home-page-card-desc">Use AI Chat for explanations and AI Agent for multi-step work with usage limits, safety checks, and Pro unlimited access.</p>
       <p class="home-page-card-link"><a href="/use-cases/ai-agent">Explore AI workflows →</a></p>
     </div>
-  </div>
-</section>
-
-<section class="home-page-section dense alt">
-  <p class="home-page-eyebrow">Plans</p>
-  <h2 class="home-page-section-title">Start with core workspace tools. Upgrade for advanced delivery.</h2>
-  <table class="home-page-table">
-    <thead>
-      <tr>
-        <th>Capability</th>
-        <th>Free</th>
-        <th>Pro</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Local and SSH workspaces</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>Tabbed code editor and baseline terminal</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>AI Chat and configured provider profiles</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>AI Agent runs</td><td>Metered</td><td>Unlimited</td></tr>
-      <tr><td>Remote content search</td><td>Metered</td><td>Unlimited</td></tr>
-      <tr><td>Git write workflows and Git AI</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>Multi-terminal workflows</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>LSP diagnostics and code actions</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>Debugger, Timeline AI, Sync/Cache, advanced task runs</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-    </tbody>
-  </table>
-  <div class="home-page-actions home-page-actions-left">
-    <a href="/pro" class="home-page-btn primary">See Pro features</a>
-    <a href="/features" class="home-page-btn secondary">View full capability map</a>
   </div>
 </section>
 

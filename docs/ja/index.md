@@ -25,6 +25,10 @@ hero:
       <a href="/ja/docs/quick-start" class="home-page-btn secondary">3分で開始</a>
       <a href="/pro" class="home-page-btn ghost">Pro を比較</a>
     </div>
+    <div class="home-page-status-note">
+      <strong>まもなく公開予定です。</strong>
+      <span>最新情報は <a href="https://x.com/nimotecode" target="_blank" rel="noreferrer">X</a> でご確認ください。</span>
+    </div>
     <div class="home-page-stat-row">
       <div class="home-page-stat">
         <strong>SSH ファースト</strong>
@@ -103,37 +107,7 @@ hero:
   </div>
 </section>
 
-<section class="home-page-section dense alt">
-  <p class="home-page-eyebrow">コアフロー</p>
-  <h2 class="home-page-section-title">サーバー接続から配信完了まで</h2>
-  <p class="home-page-section-copy">NimoteCode は、ワークスペース、エディタ、端末、Git、AI、診断、同期という実際の作業経路に合わせて設計されています。</p>
-  <div class="home-page-grid">
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">01</span>接続</div>
-      <p class="home-page-card-desc">保存済みプロファイル、パスワード/鍵認証、ルートパス選択に対応し、ローカルまたは SSH ワークスペースを開けます。</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">02</span>編集</div>
-      <p class="home-page-card-desc">タブ付きエディタで、カーソルトラッキング、Undo/Redo、クリップボード、アウトライン、モバイルキーボード制御を使えます。</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">03</span>実行</div>
-      <p class="home-page-card-desc">端末セッションでコマンドを実行し、出力を検索し、切断後に復旧。Pro で複数端末を整理できます。</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">04</span>検索</div>
-      <p class="home-page-card-desc">リモートファイル内容を検索。大文字小文字と正規表現に対応し、無料版は制限付き、Pro で無制限です。</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">05</span>コミット <span class="home-page-badge">Pro</span></div>
-      <p class="home-page-card-desc">差分確認、ブランチ管理、変更の退避、コミット、pull/push/fetch、Git AI による変更理解ができます。</p>
-    </div>
-    <div class="home-page-card">
-      <div class="home-page-card-title"><span class="home-page-card-icon">06</span>診断 <span class="home-page-badge">Pro ツール</span></div>
-      <p class="home-page-card-desc">LSP、デバッガ、Timeline AI、Tasks、Sync/Cache で、モバイルでも深い制御が可能です。</p>
-    </div>
-  </div>
-</section>
+<PricingFeatureSystem lang="ja" />
 
 <section class="home-page-section dense">
   <p class="home-page-eyebrow">利用シーン</p>
@@ -154,35 +128,6 @@ hero:
       <p class="home-page-card-desc">AI Chat で説明、AI Agent で複数ステップ作業を実行。利用制限、安全チェック、Pro の無制限アクセスに対応。</p>
       <p class="home-page-card-link"><a href="/use-cases/ai-agent">AI ワークフローを見る →</a></p>
     </div>
-  </div>
-</section>
-
-<section class="home-page-section dense alt">
-  <p class="home-page-eyebrow">プラン</p>
-  <h2 class="home-page-section-title">まずは基本のワークスペースから。必要なら拡張。</h2>
-  <table class="home-page-table">
-    <thead>
-      <tr>
-        <th>機能</th>
-        <th>無料</th>
-        <th>Pro</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>ローカル / SSH ワークスペース</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>タブ付きエディタと基本端末</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>AI Chat と設定済みプロバイダ</td><td><span class="home-page-check">✓</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>AI Agent 実行</td><td>従量</td><td>無制限</td></tr>
-      <tr><td>リモート内容検索</td><td>従量</td><td>無制限</td></tr>
-      <tr><td>Git 書き込みワークフローと Git AI</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>マルチターミナル</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>LSP 診断とコードアクション</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-      <tr><td>デバッガ、Timeline AI、Sync/Cache、高度な Tasks</td><td><span class="home-page-cross">—</span></td><td><span class="home-page-check">✓</span></td></tr>
-    </tbody>
-  </table>
-  <div class="home-page-actions home-page-actions-left">
-    <a href="/pro" class="home-page-btn primary">Pro 機能を見る</a>
-    <a href="/ja/features" class="home-page-btn secondary">全機能マップを見る</a>
   </div>
 </section>
 
