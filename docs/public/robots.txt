@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Host: nimotecode.com
 
 Sitemap: https://nimotecode.com/sitemap.xml

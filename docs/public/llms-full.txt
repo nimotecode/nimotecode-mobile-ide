@@ -1,0 +1,63 @@
+NimoteCode Full Context
+Canonical site: https://nimotecode.com
+
+Product identity:
+NimoteCode is a mobile IDE and developer workspace for iPhone, iPad, and Android devices. It is designed for real software development workflows on mobile, including SSH access to remote projects, local project browsing, code editing, terminal sessions, Git review and write workflows, AI coding help, debugging, timeline diagnostics, task execution, and sync/cache movement between environments.
+
+Positioning:
+NimoteCode is not just a code viewer or note-taking editor. It targets practical development work such as remote hotfixes, on-call diagnostics, AI-assisted coding, and mobile-first project inspection and delivery.
+
+Core capabilities:
+- Local and SSH workspaces
+- Mobile code editor
+- Persistent terminal sessions
+- Output search
+- Git workflows
+- AI Chat
+- AI Agent
+- LSP diagnostics
+- Debugging tools
+- Tasks
+- Timeline diagnostics
+- Sync / Cache workflows
+
+Primary discovery pages:
+- https://nimotecode.com/
+- https://nimotecode.com/features
+- https://nimotecode.com/pro
+- https://nimotecode.com/download
+- https://nimotecode.com/docs
+
+Use case pages:
+- https://nimotecode.com/use-cases/
+- https://nimotecode.com/use-cases/remote-hotfix
+- https://nimotecode.com/use-cases/on-call-diagnostics
+- https://nimotecode.com/use-cases/ai-agent
+
+Documentation pages:
+- https://nimotecode.com/docs/quick-start
+- https://nimotecode.com/docs/ssh
+- https://nimotecode.com/docs/editor
+- https://nimotecode.com/docs/terminal
+- https://nimotecode.com/docs/search
+- https://nimotecode.com/docs/source-control
+- https://nimotecode.com/docs/ai
+- https://nimotecode.com/docs/lsp
+- https://nimotecode.com/docs/debug
+- https://nimotecode.com/docs/tasks
+- https://nimotecode.com/docs/timeline
+- https://nimotecode.com/docs/sync-cache
+- https://nimotecode.com/docs/account-subscription
+- https://nimotecode.com/docs/security
+- https://nimotecode.com/docs/settings
+- https://nimotecode.com/docs/configuration
+- https://nimotecode.com/docs/faq
+
+Official support and legal pages:
+- https://nimotecode.com/support
+- https://nimotecode.com/privacy
+- https://nimotecode.com/terms
+- https://nimotecode.com/account-delete
+
+Suggested concise description:
+NimoteCode is a mobile-first IDE for iPhone, iPad, and Android that combines SSH workspace access, code editing, terminal, Git, AI coding assistance, debugging, and developer workflow tools in one app.

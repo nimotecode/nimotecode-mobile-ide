@@ -1,31 +1,166 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, type HeadConfig, type TransformContext } from 'vitepress'
 
-export default defineConfig({
-  title: 'NimoteCode',
-  description: 'NimoteCode is a mobile SSH developer workspace with code editor, terminal, Git, AI agent, LSP, debugger, tasks, timeline diagnostics, and sync/cache.',
-  base: '/',
-  lang: 'en-US',
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'NimoteCode - Mobile SSH Developer Workspace' }],
-    ['meta', { property: 'og:description', content: 'Edit files, run terminals, review Git changes, ask AI, and diagnose remote projects from phone or tablet.' }],
-    ['meta', { property: 'og:url', content: 'https://nimotecode.com' }],
-    ['meta', { property: 'og:image', content: 'https://nimotecode.com/app_icon.png' }],
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: 'NimoteCode - Mobile SSH Developer Workspace' }],
-    ['meta', { name: 'twitter:description', content: 'A mobile SSH workspace for editor, terminal, Git, AI, LSP, debug, tasks, timeline, and sync/cache workflows.' }],
-    ['meta', { name: 'twitter:image', content: 'https://nimotecode.com/app_icon.png' }],
-    ['script', { type: 'application/ld+json' }, JSON.stringify({
+const siteUrl = 'https://nimotecode.com'
+const socialImage = `${siteUrl}/app_icon.png`
+const localeConfig = {
+  root: { lang: 'en-US', path: '' },
+  zh: { lang: 'zh-CN', path: '/zh' },
+  ja: { lang: 'ja-JP', path: '/ja' },
+  ko: { lang: 'ko-KR', path: '/ko' },
+  ru: { lang: 'ru-RU', path: '/ru' },
+  es: { lang: 'es-ES', path: '/es' }
+} as const
+
+function normalizePath(path: string): string {
+  if (!path || path === 'index.md' || path === '/index.md') return '/'
+  let normalized = path
+    .replace(/\\/g, '/')
+    .replace(/(^|\/)index\.md$/, '$1')
+    .replace(/\.md$/, '')
+  if (!normalized.startsWith('/')) normalized = `/${normalized}`
+  normalized = normalized.replace(/\/+/g, '/')
+  return normalized === '' ? '/' : normalized
+}
+
+function canonicalUrl(path: string): string {
+  const normalized = normalizePath(path)
+  return normalized === '/' ? siteUrl : `${siteUrl}${normalized}`
+}
+
+function asContent(value: unknown, fallback: string): string {
+  if (typeof value === 'string' && value.trim()) return value
+  return fallback
+}
+
+function localeAlternates(path: string): HeadConfig[] {
+  const normalized = normalizePath(path)
+  const suffix = normalized === '/' ? '' : normalized
+  const stripped = suffix.replace(/^\/(zh|ja|ko|ru|es)(\/|$)/, '/')
+  const entries = Object.values(localeConfig).map((locale) => {
+    const localePath = `${locale.path}${stripped}` || '/'
+    const href = localePath === '/' ? siteUrl : `${siteUrl}${localePath}`
+    return ['link', { rel: 'alternate', hreflang: locale.lang, href }] as HeadConfig
+  })
+  entries.push(['link', { rel: 'alternate', hreflang: 'x-default', href: siteUrl }])
+  return entries
+}
+
+function pageSchemas(context: TransformContext): object[] {
+  const url = canonicalUrl(context.pageData.relativePath)
+  const title = asContent(context.pageData.frontmatter.title, asContent(context.pageData.title, 'NimoteCode'))
+  const description = asContent(
+    context.pageData.frontmatter.description,
+    asContent(context.siteConfig.description, 'NimoteCode mobile developer workspace documentation.')
+  )
+
+  const schemas: object[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'NimoteCode',
+      url: siteUrl,
+      logo: socialImage,
+      sameAs: [
+        'https://github.com/nimotecode',
+        'https://x.com/nimotecode'
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'NimoteCode',
+      url: siteUrl,
+      description: 'NimoteCode is a mobile-first IDE and developer workspace for SSH, terminal, Git, AI, debugging, and daily software delivery from iPhone, iPad, Android phones, and tablets.',
+      inLanguage: 'en-US'
+    },
+    {
       '@context': 'https://schema.org',
       '@type': 'SoftwareApplication',
       name: 'NimoteCode',
       applicationCategory: 'DeveloperApplication',
-      operatingSystem: 'iOS, Android',
-      description: 'Mobile SSH developer workspace with code editor, terminal, Git, AI agent, LSP, debugger, tasks, timeline diagnostics, and sync/cache.',
-      offers: { '@type': 'Offer', category: 'Freemium' }
-    })],
+      operatingSystem: 'iOS, iPadOS, Android',
+      url: siteUrl,
+      image: socialImage,
+      description: 'Mobile IDE and developer workspace with code editor, SSH terminal, Git, AI coding assistant, LSP, debugger, tasks, timeline diagnostics, and sync/cache workflows.',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        category: 'Freemium'
+      }
+    }
+  ]
+
+  if (normalizePath(context.pageData.relativePath) !== '/') {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: title,
+      description,
+      url,
+      author: {
+        '@type': 'Organization',
+        name: 'NimoteCode'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'NimoteCode',
+        logo: {
+          '@type': 'ImageObject',
+          url: socialImage
+        }
+      }
+    })
+  }
+
+  return schemas
+}
+
+export default defineConfig({
+  title: 'NimoteCode',
+  description: 'NimoteCode is a mobile-first IDE and developer workspace with SSH terminal, code editor, Git, AI agent, LSP, debugger, tasks, timeline diagnostics, and sync/cache.',
+  base: '/',
+  lang: 'en-US',
+  cleanUrls: true,
+  sitemap: {
+    hostname: siteUrl
+  },
+  transformHead(context) {
+    const url = canonicalUrl(context.pageData.relativePath)
+    const title = asContent(context.pageData.frontmatter.title, asContent(context.pageData.title, 'NimoteCode'))
+    const description = asContent(
+      context.pageData.frontmatter.description,
+      asContent(context.siteConfig.description, 'NimoteCode mobile developer workspace.')
+    )
+    const image = asContent(context.pageData.frontmatter.image, socialImage)
+
+    return [
+      ['link', { rel: 'canonical', href: url }],
+      ['meta', { property: 'og:site_name', content: 'NimoteCode' }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:url', content: url }],
+      ['meta', { property: 'og:image', content: image }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { name: 'twitter:image', content: image }],
+      ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+      ['meta', { name: 'author', content: 'NimoteCode' }],
+      ['meta', { name: 'apple-mobile-web-app-title', content: 'NimoteCode' }],
+      ['script', { type: 'application/ld+json' }, JSON.stringify(pageSchemas(context))],
+      ...localeAlternates(context.pageData.relativePath)
+    ]
+  },
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
+    ['meta', { name: 'theme-color', content: '#4f46e5' }],
+    ['meta', { name: 'generator', content: 'VitePress' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'format-detection', content: 'telephone=no' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', {
@@ -34,38 +169,25 @@ export default defineConfig({
     }]
   ],
 
-  // Theme configuration
   themeConfig: {
     siteTitle: 'NimoteCode',
     logo: {
       light: '/logo-light.png',
       dark: '/logo-dark.png'
     },
-
-    // Social links
     socialLinks: [
       { icon: 'github', link: 'https://github.com/nimotecode' },
       { icon: 'twitter', link: 'https://x.com/nimotecode' },
       { icon: 'discord', link: 'https://discord.gg/nimotecode' }
     ],
-
-    // Footer configuration
     footer: {
       message: 'Built for developers on the move. Released under the MIT License.',
       copyright: 'Copyright © 2024 NimoteCode. All rights reserved.'
     },
-
-    // Edit link configuration
     editLink: {
       pattern: 'https://github.com/nimotecode/nimote_issues/edit/main/docs/:path',
       text: 'Edit this page on GitHub'
-    },
-
-    // Carbon ads (optional)
-    // carbonAds: {
-    //   code: 'your-carbon-code',
-    //   placement: 'your-carbon-placement'
-    // }
+    }
   },
 
   locales: {
@@ -75,6 +197,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Features', link: '/features' },
+          { text: 'Use Cases', link: '/use-cases/' },
           { text: 'Pro', link: '/pro' },
           { text: 'Docs', link: '/docs/quick-start' },
           { text: 'Download', link: '/download' },
@@ -88,6 +211,7 @@ export default defineConfig({
                 { text: 'Quick Start', link: '/docs/quick-start' },
                 { text: 'Introduction', link: '/introduction' },
                 { text: 'Features', link: '/features' },
+                { text: 'Use Cases', link: '/use-cases/' },
                 { text: 'Pro', link: '/pro' },
                 { text: 'Download', link: '/download' }
               ]
@@ -95,6 +219,7 @@ export default defineConfig({
             {
               text: 'Use Cases',
               items: [
+                { text: 'Overview', link: '/use-cases/' },
                 { text: 'Remote Hotfix', link: '/use-cases/remote-hotfix' },
                 { text: 'On-call Diagnostics', link: '/use-cases/on-call-diagnostics' },
                 { text: 'AI Agent Workflows', link: '/use-cases/ai-agent' }
@@ -137,8 +262,6 @@ export default defineConfig({
             }
           ]
         },
-
-        // Search configuration
         search: {
           provider: 'local'
         }
@@ -152,6 +275,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '功能', link: '/zh/features' },
+          { text: '场景', link: '/zh/use-cases/' },
           { text: '文档', link: '/zh/docs/quick-start' },
           { text: '支持', link: '/zh/support' },
           { text: '账号删除', link: '/zh/account-delete' },
@@ -166,13 +290,24 @@ export default defineConfig({
                 { text: '快速入门', link: '/zh/docs/quick-start' },
                 { text: '简介', link: '/zh/introduction' },
                 { text: '功能特性', link: '/zh/features' },
+                { text: '使用场景', link: '/zh/use-cases/' },
                 { text: '下载', link: '/zh/download' }
+              ]
+            },
+            {
+              text: '场景',
+              items: [
+                { text: '总览', link: '/zh/use-cases/' },
+                { text: '远程热修', link: '/zh/use-cases/remote-hotfix' },
+                { text: '值班诊断', link: '/zh/use-cases/on-call-diagnostics' },
+                { text: 'AI Agent 工作流', link: '/zh/use-cases/ai-agent' }
               ]
             },
             {
               text: '文档',
               items: [
                 { text: 'SSH 远程开发', link: '/zh/docs/ssh' },
+                { text: '编辑器', link: '/zh/docs/editor' },
                 { text: '终端使用', link: '/zh/docs/terminal' },
                 { text: 'Source Control 工作流', link: '/zh/docs/source-control' },
                 { text: 'AI 助手', link: '/zh/docs/ai' },
@@ -194,7 +329,6 @@ export default defineConfig({
             }
           ]
         },
-
         search: {
           provider: 'local'
         }
@@ -250,7 +384,6 @@ export default defineConfig({
             }
           ]
         },
-
         search: {
           provider: 'local'
         }
@@ -306,7 +439,6 @@ export default defineConfig({
             }
           ]
         },
-
         search: {
           provider: 'local'
         }
@@ -362,7 +494,6 @@ export default defineConfig({
             }
           ]
         },
-
         search: {
           provider: 'local'
         }
@@ -405,7 +536,7 @@ export default defineConfig({
                 { text: 'Panel Tasks', link: '/es/docs/tasks' },
                 { text: 'Panel Timeline', link: '/es/docs/timeline' },
                 { text: 'Sync / Cache', link: '/es/docs/sync-cache' },
-                { text: 'Configuración', link: '/es/docs/settings' },
+                { text: 'Ajustes', link: '/es/docs/settings' },
                 { text: 'Configuración', link: '/es/docs/configuration' }
               ]
             },
@@ -418,15 +549,13 @@ export default defineConfig({
             }
           ]
         },
-
         search: {
           provider: 'local'
         }
       }
     }
   },
-  
-  // Build configuration
+
   build: {
     outDir: './dist',
     assetsDir: './assets',

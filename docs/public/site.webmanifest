@@ -1,0 +1,16 @@
+{
+  "name": "NimoteCode",
+  "short_name": "NimoteCode",
+  "description": "Mobile IDE and developer workspace with SSH, terminal, Git, AI, and debugging workflows.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/app_icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

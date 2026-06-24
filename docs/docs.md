@@ -1,10 +1,13 @@
 ---
 title: Documentation | NimoteCode
+description: Explore NimoteCode documentation for mobile IDE workflows including SSH development, terminal usage, Git, AI assistant, LSP, debugging, tasks, timeline, and sync/cache.
 ---
 
 # Documentation
 
-Welcome to the NimoteCode documentation hub. Everything you need to get started and master mobile development.
+Welcome to the NimoteCode documentation hub. Everything you need to get started and master mobile development with a real mobile IDE.
+
+NimoteCode documentation is organized around practical developer workflows: mobile SSH access, code editing, terminal execution, Git review, AI coding assistance, debugging, and repeatable task automation from iPhone, iPad, and Android devices.
 
 ## Getting Started
 
@@ -74,6 +77,20 @@ Master each aspect of NimoteCode with these comprehensive guides.
 |--------|-------------|-----------|
 | **[Settings](/docs/settings)** | Personalize your development experience | Theme, language, keyboard, editor preferences |
 | **[Configuration](/docs/configuration)** | Recommended setups for optimal workflow | AI config, SSH config, task templates |
+
+## Use Cases That Map Search Intent
+
+These pages describe the concrete scenarios people often search for before they know the product name NimoteCode.
+
+| Search Intent | Best Entry Page | Why It Matters |
+|---------------|-----------------|----------------|
+| Mobile SSH IDE | **[SSH Workspace](/docs/ssh)** | Shows how NimoteCode connects to and operates on remote projects |
+| Code editor on phone | **[Editor](/docs/editor)** | Explains file editing, tabs, navigation, and mobile editing ergonomics |
+| Terminal on iPhone or Android | **[Terminal](/docs/terminal)** | Covers command execution, output search, and persistent sessions |
+| Git workflow from mobile | **[Source Control](/docs/source-control)** | Details diffs, commits, branches, and Git AI workflows |
+| AI coding assistant with workspace context | **[AI Assistant](/docs/ai)** | Explains Chat, Agent, provider setup, and controlled execution |
+| Remote hotfix workflow | **[Remote Hotfix](/use-cases/remote-hotfix)** | Demonstrates end-to-end patching from a mobile device |
+| On-call debugging from phone | **[On-call Diagnostics](/use-cases/on-call-diagnostics)** | Maps diagnostics, timeline, and debug flows to incident response |
 
 ## Help & Reference
 
