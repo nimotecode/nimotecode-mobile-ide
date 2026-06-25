@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Design Tokens
+   - CSS custom properties (light / dark)
+   - All other modules read from these variables
+   ========================================================================== */
+
+:root {
+  /* Typography */
+  --vp-font-family-base: "Plus Jakarta Sans", "Inter", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR",
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", "SF Mono", "Fira Code", "Roboto Mono", ui-monospace, monospace;
+
+  /* VitePress brand hooks (kept for inline links & buttons) */
+  --vp-c-brand-1: #4f46e5;
+  --vp-c-brand-2: #06b6d4;
+  --vp-c-brand-3: #a855f7;
+  --vp-c-brand-soft: rgba(79, 70, 229, 0.08);
+
+  /* Fluid type scale */
+  --nimote-fs-xs: 0.78rem;
+  --nimote-fs-sm: 0.88rem;
+  --nimote-fs-md: 0.98rem;
+  --nimote-fs-lg: 1.08rem;
+  --nimote-fs-xl: 1.32rem;
+  --nimote-fs-2xl: clamp(1.5rem, 1.2rem + 0.9vw, 1.75rem);
+  --nimote-fs-3xl: clamp(1.85rem, 1.4rem + 1.4vw, 2.35rem);
+  --nimote-fs-4xl: clamp(2.1rem, 1.4rem + 2.2vw, 3rem);
+  --nimote-fs-5xl: clamp(2.5rem, 1.6rem + 3.4vw, 4rem);
+
+  /* Spacing scale (4px base) */
+  --nimote-space-1: 4px;
+  --nimote-space-2: 8px;
+  --nimote-space-3: 12px;
+  --nimote-space-4: 16px;
+  --nimote-space-5: 20px;
+  --nimote-space-6: 24px;
+  --nimote-space-8: 32px;
+  --nimote-space-10: 40px;
+  --nimote-space-12: 48px;
+  --nimote-space-16: 64px;
+  --nimote-space-20: 80px;
+
+  /* Radii */
+  --nimote-radius-sm: 8px;
+  --nimote-radius-md: 12px;
+  --nimote-radius-lg: 18px;
+  --nimote-radius-xl: 24px;
+  --nimote-radius-2xl: 32px;
+  --nimote-radius-pill: 999px;
+
+  /* Accent (refined indigo + cyan + violet triad) */
+  --nimote-accent: #4f46e5;
+  --nimote-accent-rgb: 79, 70, 229;
+  --nimote-accent-light: #6366f1;
+  --nimote-accent-dark: #3730a3;
+  --nimote-accent-2: #06b6d4;
+  --nimote-accent-2-rgb: 6, 182, 212;
+  --nimote-accent-3: #a855f7;
+  --nimote-accent-3-rgb: 168, 85, 247;
+  --nimote-gold: #f59e0b;
+  --nimote-gold-rgb: 245, 158, 11;
+
+  /* Surfaces — Light */
+  --nimote-bg: #ffffff;
+  --nimote-bg-rgb: 255, 255, 255;
+  --nimote-bg-elevated: #ffffff;
+  --nimote-bg-subtle: #f6f7fb;
+  --nimote-bg-muted: #eef0f7;
+  --nimote-card: #ffffff;
+  --nimote-card-hover: #fafbff;
+
+  /* Text — Light */
+  --nimote-text-primary: #0b1020;
+  --nimote-text-secondary: #475569;
+  --nimote-text-muted: #94a3b8;
+  --nimote-text-inverse: #ffffff;
+
+  /* Borders — Light */
+  --nimote-border: rgba(15, 23, 42, 0.06);
+  --nimote-border-strong: rgba(15, 23, 42, 0.12);
+  --nimote-border-accent: rgba(79, 70, 229, 0.22);
+
+  /* Shadows — Light (slightly stronger for clarity) */
+  --nimote-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --nimote-shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.05);
+  --nimote-shadow-md: 0 8px 28px rgba(15, 23, 42, 0.07);
+  --nimote-shadow-lg: 0 18px 48px rgba(15, 23, 42, 0.09);
+  --nimote-shadow-xl: 0 30px 80px rgba(15, 23, 42, 0.12);
+  --nimote-shadow-brand: 0 18px 48px rgba(79, 70, 229, 0.22);
+  --nimote-shadow-gold: 0 18px 48px rgba(245, 158, 11, 0.18);
+
+  /* Gradients — Light */
+  --nimote-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+  --nimote-gradient-soft: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(6, 182, 212, 0.05));
+  --nimote-gradient-vivid: linear-gradient(135deg, #6366f1 0%, #06b6d4 50%, #a855f7 100%);
+  --nimote-gradient-gold: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --nimote-gradient-bg: radial-gradient(ellipse 70% 50% at 50% -10%, rgba(79, 70, 229, 0.08) 0%, transparent 70%);
+
+  /* Motion */
+  --nimote-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --nimote-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --nimote-transition: 0.25s var(--nimote-ease);
+
+  /* Layout */
+  --nimote-container: 1248px;
+  --nimote-nav-height: 64px;
+
+  color-scheme: light;
+}
+
+/* Dark theme */
+.dark {
+  --vp-c-brand-1: #818cf8;
+  --vp-c-brand-2: #22d3ee;
+  --vp-c-brand-3: #c084fc;
+  --vp-c-brand-soft: rgba(129, 140, 248, 0.12);
+
+  /* Surfaces — Dark */
+  --nimote-bg: #060814;
+  --nimote-bg-rgb: 6, 8, 20;
+  --nimote-bg-elevated: #0a0e1f;
+  --nimote-bg-subtle: #0d1228;
+  --nimote-bg-muted: #11172e;
+  --nimote-card: #0a0e1f;
+  --nimote-card-hover: #11172e;
+
+  /* Text — Dark */
+  --nimote-text-primary: #f1f5f9;
+  --nimote-text-secondary: #94a3b8;
+  --nimote-text-muted: #64748b;
+  --nimote-text-inverse: #0b1020;
+
+  /* Borders — Dark */
+  --nimote-border: rgba(255, 255, 255, 0.07);
+  --nimote-border-strong: rgba(255, 255, 255, 0.12);
+  --nimote-border-accent: rgba(129, 140, 248, 0.3);
+
+  /* Shadows — Dark */
+  --nimote-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --nimote-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.45);
+  --nimote-shadow-md: 0 8px 28px rgba(0, 0, 0, 0.55);
+  --nimote-shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.6);
+  --nimote-shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.7);
+  --nimote-shadow-brand: 0 18px 48px rgba(79, 70, 229, 0.35);
+  --nimote-shadow-gold: 0 18px 48px rgba(245, 158, 11, 0.2);
+
+  --nimote-gradient: linear-gradient(135deg, #818cf8 0%, #22d3ee 100%);
+  --nimote-gradient-soft: linear-gradient(135deg, rgba(129, 140, 248, 0.14), rgba(34, 211, 238, 0.08));
+  --nimote-gradient-vivid: linear-gradient(135deg, #818cf8 0%, #22d3ee 50%, #c084fc 100%);
+  --nimote-gradient-bg: radial-gradient(ellipse 70% 50% at 50% -10%, rgba(129, 140, 248, 0.12) 0%, transparent 70%);
+
+  color-scheme: dark;
+}

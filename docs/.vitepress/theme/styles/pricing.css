@@ -1,0 +1,241 @@
+/* ==========================================================================
+   Pricing Feature System
+   - Feature grid (.pf-feature-grid / .pf-feature-card)
+   - Pricing plan grid (.pf-pricing-grid / .pf-plan-card)
+   - Plan header, price, features list
+   - Light-mode overrides
+   ========================================================================== */
+
+.pricing-feature-system {
+  width: 100%;
+}
+
+.pf-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.pf-feature-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--nimote-radius-xl);
+  padding: 1.8rem;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.56)),
+    linear-gradient(135deg, rgba(79, 70, 229, 0.06), rgba(6, 182, 212, 0.02));
+  transition: transform 0.3s var(--nimote-ease), border-color 0.3s var(--nimote-ease);
+}
+.pf-feature-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--nimote-border-accent);
+}
+
+.pf-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.pf-card-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--nimote-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.pf-card-head span {
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--nimote-radius-pill);
+  border: 1px solid var(--nimote-border);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--nimote-text-secondary);
+  background: var(--nimote-bg-subtle);
+}
+
+.pf-feature-card ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.pf-feature-card li {
+  margin: 0.55rem 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--nimote-text-secondary);
+  padding-left: 18px;
+  position: relative;
+}
+.pf-feature-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--nimote-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.pf-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+  margin-top: 3.2rem;
+}
+
+.pf-plan-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--nimote-radius-2xl);
+  padding: 2.4rem;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.6)),
+    linear-gradient(135deg, rgba(79, 70, 229, 0.06), rgba(6, 182, 212, 0.02));
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+  transition: transform 0.3s var(--nimote-ease), border-color 0.3s var(--nimote-ease),
+    box-shadow 0.3s var(--nimote-ease);
+  position: relative;
+}
+
+.pf-plan-card.is-featured {
+  border-color: var(--nimote-border-accent);
+  box-shadow: var(--nimote-shadow-brand);
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.86), rgba(15, 23, 42, 0.66)),
+    radial-gradient(circle at top right, rgba(168, 85, 247, 0.18), transparent 50%),
+    linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(6, 182, 212, 0.04));
+}
+
+.pf-plan-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--nimote-border-accent);
+  box-shadow: var(--nimote-shadow-lg);
+}
+
+.pf-plan-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.pf-plan-topline h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--nimote-text-primary);
+  letter-spacing: -0.015em;
+}
+
+.pf-plan-topline span {
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--nimote-radius-pill);
+  background: var(--nimote-gradient);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.pf-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.pf-price-row strong {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--nimote-text-primary);
+  line-height: 1;
+}
+.pf-price-row span {
+  font-size: 0.96rem;
+  color: var(--nimote-text-secondary);
+}
+
+.pf-yearly-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.pf-yearly-row strong {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--nimote-text-primary);
+}
+.pf-yearly-row span {
+  font-size: 0.9rem;
+  color: var(--nimote-text-muted);
+}
+
+.pf-plan-summary {
+  margin: 0 0 1.5rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--nimote-text-secondary);
+}
+
+.pf-plan-features {
+  margin: 1.8rem 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.pf-plan-features li {
+  margin: 0.65rem 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--nimote-text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding-left: 0;
+}
+.pf-plan-features li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--nimote-accent);
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.pf-trust-line {
+  text-align: center;
+  margin: 2rem 0 0;
+  color: var(--nimote-text-muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+/* Light-mode pricing */
+html:not(.dark) .pf-feature-card,
+html:not(.dark) .pf-plan-card {
+  border-color: rgba(15, 23, 42, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95)),
+    linear-gradient(135deg, rgba(79, 70, 229, 0.03), rgba(6, 182, 212, 0.02));
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.06);
+}
+html:not(.dark) .pf-plan-card.is-featured {
+  border-color: rgba(99, 102, 241, 0.24);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(243, 244, 255, 0.95)),
+    radial-gradient(circle at top right, rgba(192, 132, 252, 0.14), transparent 50%),
+    linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(6, 182, 212, 0.03));
+  box-shadow: 0 18px 50px rgba(79, 70, 229, 0.14);
+}
+html:not(.dark) .pf-card-head span {
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.18);
+  color: var(--nimote-accent);
+}

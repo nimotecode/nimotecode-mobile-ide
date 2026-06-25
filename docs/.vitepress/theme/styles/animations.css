@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Animations
+   - Keyframes (fade-up, fade-in, pulse-glow, hero-zoom)
+   - Initial entrance animations on .VPHero / .vp-doc
+   - prefers-reduced-motion override
+   ========================================================================== */
+
+@keyframes nimote-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nimote-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes nimote-pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(var(--nimote-accent-rgb), 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(var(--nimote-accent-rgb), 0);
+  }
+}
+
+.VPHero,
+.vp-doc {
+  animation: nimote-fade-up 0.7s var(--nimote-ease-out) both;
+}
+.VPHero {
+  animation-delay: 0.1s;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

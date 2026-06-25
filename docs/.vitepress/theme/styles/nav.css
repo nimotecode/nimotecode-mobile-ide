@@ -1,0 +1,215 @@
+/* ==========================================================================
+   Navigation
+   - Top bar (.VPNav / .VPNavBar)
+   - Logo & brand title
+   - Menu links & social links
+   - Search button
+   - Sidebar (.VPSidebar)
+   - Local nav + doc outline
+   ========================================================================== */
+
+/* Top bar — glassy & crisp */
+.VPNav,
+.VPNavBar,
+.VPNavBar.has-sidebar {
+  background: rgba(var(--nimote-bg-rgb), 0.72) !important;
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  border-bottom: 1px solid var(--nimote-border);
+  transition: background-color 0.3s var(--nimote-ease), box-shadow 0.3s var(--nimote-ease),
+    border-color 0.3s var(--nimote-ease);
+}
+
+.VPNav.scrolled {
+  box-shadow: var(--nimote-shadow-sm);
+  background: rgba(var(--nimote-bg-rgb), 0.92) !important;
+}
+
+.VPNavBar .container,
+.VPNavBar .content,
+.VPNavBar .content-body,
+.VPNavBar .divider,
+.VPNavBar .curtain {
+  background: transparent !important;
+}
+
+.VPNavBar .content-body {
+  border-bottom: none;
+  min-height: var(--nimote-nav-height);
+}
+
+.VPNavBar .title,
+.VPNavBarTitle .title {
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: -0.01em;
+  color: var(--nimote-text-primary);
+}
+
+.VPNavBarTitle {
+  gap: 10px;
+}
+
+.VPNavBarTitle .logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.22);
+  transition: transform 0.3s var(--nimote-ease);
+}
+.VPNavBarTitle:hover .logo {
+  transform: rotate(-6deg) scale(1.04);
+}
+
+.VPNavBarTitle .title {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+}
+
+/* Nav links */
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .button {
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--nimote-text-secondary);
+  padding: 8px 12px;
+  border-radius: var(--nimote-radius-sm);
+  transition: color 0.2s var(--nimote-ease), background-color 0.2s var(--nimote-ease);
+}
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuGroup .button:hover {
+  color: var(--nimote-text-primary);
+  background: var(--nimote-bg-subtle);
+}
+.VPNavBarMenuLink.active {
+  color: var(--nimote-accent);
+  font-weight: 600;
+}
+
+/* Search */
+.VPNavBarSearch {
+  border-radius: var(--nimote-radius-md);
+}
+.VPNavBarSearch .DocSearch-Button {
+  background: var(--nimote-bg-subtle);
+  border: 1px solid var(--nimote-border);
+  border-radius: var(--nimote-radius-md);
+  height: 38px;
+  padding: 0 12px;
+  font-size: 0.86rem;
+  color: var(--nimote-text-muted);
+  transition: all 0.2s var(--nimote-ease);
+}
+.VPNavBarSearch .DocSearch-Button:hover {
+  border-color: var(--nimote-border-accent);
+  background: var(--nimote-card);
+}
+
+/* Social links */
+.VPNavBarSocialLinks .VPSocialLink {
+  border-radius: var(--nimote-radius-sm);
+  transition: transform 0.2s var(--nimote-ease), background-color 0.2s var(--nimote-ease);
+}
+.VPNavBarSocialLinks .VPSocialLink:hover {
+  background: var(--nimote-bg-subtle);
+  transform: translateY(-1px);
+}
+
+/* Sidebar */
+.VPSidebar {
+  background: var(--nimote-bg-elevated);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid var(--nimote-border);
+  padding-top: 8px;
+}
+
+.VPSidebarGroup {
+  padding: 0 12px 12px;
+}
+
+.VPSidebarGroup .title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--nimote-text-muted);
+  margin: 16px 12px 8px;
+  padding: 0;
+}
+
+.VPSidebarItem {
+  position: relative;
+}
+
+.VPSidebarItem .item .link,
+.VPSidebarItem .item .text {
+  color: var(--nimote-text-secondary);
+  font-weight: 500;
+  font-size: 0.92rem;
+  border-radius: var(--nimote-radius-sm);
+  padding: 8px 12px;
+  margin: 1px 0;
+  line-height: 1.4;
+  transition: color 0.18s var(--nimote-ease), background-color 0.18s var(--nimote-ease);
+}
+
+.VPSidebarItem .item .link:hover,
+.VPSidebarItem .item .link:hover .text {
+  color: var(--nimote-text-primary);
+  background: var(--nimote-bg-subtle);
+}
+
+.VPSidebarItem.is-active > .item > .link {
+  background: linear-gradient(90deg, rgba(var(--nimote-accent-rgb), 0.1), transparent);
+  position: relative;
+}
+.VPSidebarItem.is-active > .item > .link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--nimote-accent);
+}
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--nimote-accent);
+  font-weight: 600;
+}
+
+/* Local nav (in-page outline on top) */
+.VPLocalNav {
+  background: rgba(var(--nimote-bg-rgb), 0.85);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border-bottom: 1px solid var(--nimote-border);
+}
+
+.VPDocAsideOutline {
+  border-left: 1px solid var(--nimote-border);
+  padding-left: 4px;
+}
+
+.VPDocAside .outline-link {
+  color: var(--nimote-text-secondary);
+  font-weight: 500;
+  font-size: 0.86rem;
+  padding: 6px 12px;
+  border-radius: var(--nimote-radius-sm);
+  transition: color 0.18s var(--nimote-ease), background-color 0.18s var(--nimote-ease);
+  line-height: 1.45;
+  border-left: 2px solid transparent;
+  margin-left: -2px;
+}
+.VPDocAside .outline-link:hover {
+  color: var(--nimote-text-primary);
+  background: var(--nimote-bg-subtle);
+}
+.VPDocAside .outline-link.active {
+  color: var(--nimote-accent);
+  font-weight: 600;
+  background: var(--nimote-bg-subtle);
+  border-left-color: var(--nimote-accent);
+}

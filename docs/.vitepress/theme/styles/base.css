@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Base & Reset
+   - Box-sizing, html/body defaults
+   - Media, links, form elements
+   - Selection, scrollbar, focus visibility
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nimote-nav-height) + 16px);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: clip;
+}
+
+html,
+body,
+#app,
+.Layout {
+  background: var(--nimote-bg);
+  color: var(--nimote-text-primary);
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--vp-font-family-base);
+  font-feature-settings: "cv11", "ss01", "ss03";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: var(--nimote-gradient-bg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100vh;
+  transition: background-color 0.3s var(--nimote-ease), color 0.3s var(--nimote-ease);
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: rgba(var(--nimote-accent-rgb), 0.18);
+  color: var(--nimote-text-primary);
+}
+.dark ::selection {
+  background: rgba(var(--nimote-accent-rgb), 0.35);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--nimote-accent-rgb), 0.18);
+  border-radius: var(--nimote-radius-pill);
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--nimote-accent-rgb), 0.32);
+  background-clip: content-box;
+}
+
+/* Focus visibility */
+:focus-visible {
+  outline: 2px solid var(--nimote-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
