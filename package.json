@@ -5,12 +5,15 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "deploy": "npm run docs:build && wrangler deploy",
+    "preview": "npm run docs:build && wrangler dev"
   },
   "devDependencies": {
     "sharp": "^0.35.2",
     "vite-plugin-image-optimizer": "^2.0.3",
     "vitepress": "^1.6.4",
-    "vitepress-plugin-google-analytics": "^1.0.2"
+    "vitepress-plugin-google-analytics": "^1.0.2",
+    "wrangler": "^4.106.0"
   }
 }
