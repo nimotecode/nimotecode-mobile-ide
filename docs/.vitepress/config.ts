@@ -1,4 +1,5 @@
 import { defineConfig, type HeadConfig, type TransformContext } from 'vitepress'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 const siteUrl = 'https://nimotecode.com'
 const socialImage = `${siteUrl}/app_icon.png`
@@ -601,9 +602,36 @@ export default defineConfig({
     }
   },
 
-  build: {
-    outDir: './dist',
-    assetsDir: './assets',
-    emptyOutDir: true
+  outDir: './.vitepress/dist',
+  assetsDir: './assets',
+
+  vite: {
+    plugins: [
+      ViteImageOptimizer({
+        test: /\.(jpe?g|png|gif|webp|avif)$/i,
+        exclude: [
+          'app_icon.png',
+          'favicon.ico'
+        ],
+        includePublic: true,
+        cache: true,
+        cacheLocation: 'node_modules/.vite-image-optimizer',
+        logStats: true,
+        ansiColors: true,
+        svg: {
+          multipass: true
+        },
+        png: {
+          quality: 80,
+          compressionLevel: 9
+        },
+        jpeg: {
+          quality: 80
+        },
+        webp: {
+          quality: 80
+        }
+      })
+    ]
   }
 })
