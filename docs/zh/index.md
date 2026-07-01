@@ -16,7 +16,7 @@ hero:
     <div class="home-page-hero-copy">
       <p class="home-page-badge">支持 iPhone 和 Android</p>
       <div class="home-page-logo-lockup">
-        <img src="/app_icon.png" alt="NimoteCode" class="home-page-logo">
+        <img src="/app_icon.png" alt="NimoteCode" class="home-page-logo" width="1024" height="1024" decoding="async">
         <span class="home-page-brand">NimoteCode</span>
       </div>
       <h1 class="home-page-title">不是代码编辑器。<br>而是真实开发工作区。</h1>
@@ -28,8 +28,8 @@ hero:
       </div>
     </div>
     <div class="home-page-store-showcase" aria-hidden="true">
-      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="" class="home-page-store-showcase-badge home-page-store-showcase-badge-google">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="" class="home-page-store-showcase-badge home-page-store-showcase-badge-apple">
+      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="" class="home-page-store-showcase-badge home-page-store-showcase-badge-google" width="320" height="96" loading="eager" decoding="async">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="" class="home-page-store-showcase-badge home-page-store-showcase-badge-apple" width="135" height="40" loading="eager" decoding="async">
     </div>
     <a href="#product-demo" class="home-page-scroll-hint">下滑查看演示</a>
   </div>
@@ -42,17 +42,27 @@ hero:
     <p class="home-page-section-copy">SSH 接入、代码修改、终端验证、Git 审查和 AI 辅助，全部收敛在同一个工作区里。</p>
   </div>
   <div class="home-page-video">
-    <div class="home-page-video-shell">
-      <iframe
-        class="home-page-video-frame"
-        src="https://www.youtube.com/embed/cTpxPqJwo_s"
-        title="NimoteCode 产品演示"
+    <a
+      class="home-page-video-shell home-page-video-link"
+      href="https://www.youtube.com/watch?v=cTpxPqJwo_s"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="在 YouTube 上观看 NimoteCode 产品演示"
+    >
+      <img
+        class="home-page-video-poster"
+        src="/screenshots/NimoteCode_Promotion.jpg"
+        alt="NimoteCode 产品演示预览"
+        width="4096"
+        height="2304"
         loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </div>
+        decoding="async"
+      >
+      <span class="home-page-video-overlay">
+        <span class="home-page-video-play">在 YouTube 上观看演示</span>
+        <span class="home-page-video-meta">会打开轻量级外部播放器</span>
+      </span>
+    </a>
   </div>
 </section>
 

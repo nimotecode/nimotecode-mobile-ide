@@ -1,34 +1,45 @@
-NimoteCode
-Official website: https://nimotecode.com
-Category: Mobile IDE and developer workspace
+# NimoteCode
 
-Summary:
-NimoteCode is a mobile-first IDE for iPhone, iPad, and Android. It combines code editing, SSH remote workspace access, terminal sessions, Git workflows, AI coding assistance, LSP, debugging, tasks, timeline diagnostics, and sync/cache workflows in one product.
+> NimoteCode is a mobile-first IDE and developer workspace for iPhone, iPad, and Android. It combines SSH workspaces, code editing, terminals, Git workflows, AI assistance, debugging, tasks, timeline diagnostics, sync/cache, and product support in one app.
 
-Primary pages:
-- Home: https://nimotecode.com/
-- Features: https://nimotecode.com/features
-- Pro: https://nimotecode.com/pro
-- Download: https://nimotecode.com/download
-- Documentation hub: https://nimotecode.com/docs
-- Quick Start: https://nimotecode.com/docs/quick-start
+NimoteCode is organized around a few primary journeys: learn the product, compare Free and Pro, install the app, and move into the documentation for day-to-day workflows.
 
-Use cases:
-- Remote hotfix from mobile: https://nimotecode.com/use-cases/remote-hotfix
-- On-call diagnostics from mobile: https://nimotecode.com/use-cases/on-call-diagnostics
-- AI agent workflows: https://nimotecode.com/use-cases/ai-agent
+## Product
+- [Home](https://nimotecode.com/): Main product overview and demo-led landing page.
+- [Features](https://nimotecode.com/features): Core capabilities and workflow summary.
+- [Pro](https://nimotecode.com/pro): Free vs Pro comparison and upgrade value.
+- [Download](https://nimotecode.com/download): Store links and installation steps.
+- [Use Cases](https://nimotecode.com/use-cases/): Scenario overview for urgent mobile development work.
 
-Key documentation:
-- SSH Workspace: https://nimotecode.com/docs/ssh
-- Editor: https://nimotecode.com/docs/editor
-- Terminal: https://nimotecode.com/docs/terminal
-- Search: https://nimotecode.com/docs/search
-- Source Control: https://nimotecode.com/docs/source-control
-- AI Assistant: https://nimotecode.com/docs/ai
-- LSP: https://nimotecode.com/docs/lsp
-- Debug: https://nimotecode.com/docs/debug
-- Tasks: https://nimotecode.com/docs/tasks
-- Timeline: https://nimotecode.com/docs/timeline
-- Sync / Cache: https://nimotecode.com/docs/sync-cache
+## Documentation
+- [Quick Start](https://nimotecode.com/docs/quick-start): First-run setup and workspace basics.
+- [SSH Workspace](https://nimotecode.com/docs/ssh): Remote connections and workspace setup.
+- [Editor](https://nimotecode.com/docs/editor): Editing workflow and navigation.
+- [Terminal](https://nimotecode.com/docs/terminal): Terminal sessions and command execution.
+- [Search](https://nimotecode.com/docs/search): Project and output search guidance.
+- [Source Control](https://nimotecode.com/docs/source-control): Git review and write workflows.
+- [AI Assistant](https://nimotecode.com/docs/ai): AI chat and agent usage.
+- [LSP](https://nimotecode.com/docs/lsp): Language server diagnostics and code actions.
+- [Debug](https://nimotecode.com/docs/debug): Breakpoints, call stacks, variables, and watch views.
+- [Tasks](https://nimotecode.com/docs/tasks): Task creation and execution.
+- [Timeline](https://nimotecode.com/docs/timeline): Event inspection and root-cause workflows.
+- [Sync / Cache](https://nimotecode.com/docs/sync-cache): Workspace movement and cache flows.
 
-Official support and policy pages exist on the main site for user assistance, privacy, terms, and account deletion.
+## Use Cases
+- [Remote Hotfix](https://nimotecode.com/use-cases/remote-hotfix): Patch production from a phone.
+- [On-call Diagnostics](https://nimotecode.com/use-cases/on-call-diagnostics): Investigate incidents while away from a desk.
+- [AI Agent Workflows](https://nimotecode.com/use-cases/ai-agent): Use AI inside a real development workflow.
+
+## Support and Policy
+- [Support](https://nimotecode.com/support): Help and contact information.
+- [Privacy](https://nimotecode.com/privacy): Privacy policy.
+- [Terms](https://nimotecode.com/terms): Terms of service.
+- [Account Deletion](https://nimotecode.com/account-delete): Account deletion instructions.
+
+## Locales
+- [English](https://nimotecode.com/): Default site locale.
+- [Chinese](https://nimotecode.com/zh/): Simplified Chinese locale.
+- [Japanese](https://nimotecode.com/ja/): Japanese locale.
+- [Korean](https://nimotecode.com/ko/): Korean locale.
+- [Russian](https://nimotecode.com/ru/): Russian locale.
+- [Spanish](https://nimotecode.com/es/): Spanish locale.

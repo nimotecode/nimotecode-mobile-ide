@@ -1,63 +1,54 @@
-NimoteCode Full Context
-Canonical site: https://nimotecode.com
+# NimoteCode Full Context
 
-Product identity:
-NimoteCode is a mobile IDE and developer workspace for iPhone, iPad, and Android devices. It is designed for real software development workflows on mobile, including SSH access to remote projects, local project browsing, code editing, terminal sessions, Git review and write workflows, AI coding help, debugging, timeline diagnostics, task execution, and sync/cache movement between environments.
+> NimoteCode is a mobile-first IDE and developer workspace for iPhone, iPad, and Android. It is built for real development work on mobile: SSH access, code editing, terminal sessions, Git review and write workflows, AI assistance, debugging, task execution, timeline diagnostics, and sync/cache movement between environments.
 
-Positioning:
-NimoteCode is not just a code viewer or note-taking editor. It targets practical development work such as remote hotfixes, on-call diagnostics, AI-assisted coding, and mobile-first project inspection and delivery.
+NimoteCode is not a code viewer or note-taking app. It is designed for practical workflows such as remote hotfixes, on-call diagnostics, AI-assisted coding, and mobile-first project inspection and delivery.
 
-Core capabilities:
-- Local and SSH workspaces
-- Mobile code editor
-- Persistent terminal sessions
-- Output search
-- Git workflows
-- AI Chat
-- AI Agent
-- LSP diagnostics
-- Debugging tools
-- Tasks
-- Timeline diagnostics
-- Sync / Cache workflows
+## Primary Pages
+- [Home](https://nimotecode.com/): Product overview and demo-led landing page.
+- [Features](https://nimotecode.com/features): Core feature summary.
+- [Pro](https://nimotecode.com/pro): Free and Pro comparison.
+- [Download](https://nimotecode.com/download): Install steps and store links.
+- [Use Cases](https://nimotecode.com/use-cases/): Scenario hub for mobile development work.
 
-Primary discovery pages:
-- https://nimotecode.com/
-- https://nimotecode.com/features
-- https://nimotecode.com/pro
-- https://nimotecode.com/download
-- https://nimotecode.com/docs
+## Documentation
+- [Quick Start](https://nimotecode.com/docs/quick-start): First-run setup and workspace basics.
+- [SSH Workspace](https://nimotecode.com/docs/ssh): Remote connection setup and workspace behavior.
+- [Editor](https://nimotecode.com/docs/editor): Editing gestures, navigation, and workflows.
+- [Terminal](https://nimotecode.com/docs/terminal): Terminal sessions and command execution.
+- [Search](https://nimotecode.com/docs/search): File and output search guidance.
+- [Source Control](https://nimotecode.com/docs/source-control): Git status, diff, staging, commit, push, pull, branches, and stashes.
+- [AI Assistant](https://nimotecode.com/docs/ai): AI Chat and AI Agent usage.
+- [LSP](https://nimotecode.com/docs/lsp): Language server diagnostics and code actions.
+- [Debug](https://nimotecode.com/docs/debug): Breakpoints, stack inspection, variables, and watch views.
+- [Tasks](https://nimotecode.com/docs/tasks): Task creation and execution.
+- [Timeline](https://nimotecode.com/docs/timeline): Event inspection and causal troubleshooting.
+- [Sync / Cache](https://nimotecode.com/docs/sync-cache): Workspace movement and cache flows.
+- [Account and Subscription](https://nimotecode.com/docs/account-subscription): Account and premium verification behavior.
+- [Security](https://nimotecode.com/docs/security): Safety and review-related settings.
+- [Settings](https://nimotecode.com/docs/settings): App configuration and preferences.
+- [Configuration](https://nimotecode.com/docs/configuration): Advanced setup and environment configuration.
+- [FAQ](https://nimotecode.com/docs/faq): Common questions and answers.
 
-Use case pages:
-- https://nimotecode.com/use-cases/
-- https://nimotecode.com/use-cases/remote-hotfix
-- https://nimotecode.com/use-cases/on-call-diagnostics
-- https://nimotecode.com/use-cases/ai-agent
+## Use Cases
+- [Remote Hotfix](https://nimotecode.com/use-cases/remote-hotfix): Patch production from a phone.
+- [On-call Diagnostics](https://nimotecode.com/use-cases/on-call-diagnostics): Investigate incidents while away from a desk.
+- [AI Agent Workflows](https://nimotecode.com/use-cases/ai-agent): Use AI inside a real development workflow.
 
-Documentation pages:
-- https://nimotecode.com/docs/quick-start
-- https://nimotecode.com/docs/ssh
-- https://nimotecode.com/docs/editor
-- https://nimotecode.com/docs/terminal
-- https://nimotecode.com/docs/search
-- https://nimotecode.com/docs/source-control
-- https://nimotecode.com/docs/ai
-- https://nimotecode.com/docs/lsp
-- https://nimotecode.com/docs/debug
-- https://nimotecode.com/docs/tasks
-- https://nimotecode.com/docs/timeline
-- https://nimotecode.com/docs/sync-cache
-- https://nimotecode.com/docs/account-subscription
-- https://nimotecode.com/docs/security
-- https://nimotecode.com/docs/settings
-- https://nimotecode.com/docs/configuration
-- https://nimotecode.com/docs/faq
+## Support And Policy
+- [Support](https://nimotecode.com/support): Help and contact information.
+- [Privacy](https://nimotecode.com/privacy): Privacy policy.
+- [Terms](https://nimotecode.com/terms): Terms of service.
+- [Account Deletion](https://nimotecode.com/account-delete): Account deletion instructions.
 
-Official support and legal pages:
-- https://nimotecode.com/support
-- https://nimotecode.com/privacy
-- https://nimotecode.com/terms
-- https://nimotecode.com/account-delete
+## Locales
+- [English](https://nimotecode.com/): Default locale.
+- [Chinese](https://nimotecode.com/zh/): Simplified Chinese locale.
+- [Japanese](https://nimotecode.com/ja/): Japanese locale.
+- [Korean](https://nimotecode.com/ko/): Korean locale.
+- [Russian](https://nimotecode.com/ru/): Russian locale.
+- [Spanish](https://nimotecode.com/es/): Spanish locale.
 
-Suggested concise description:
-NimoteCode is a mobile-first IDE for iPhone, iPad, and Android that combines SSH workspace access, code editing, terminal, Git, AI coding assistance, debugging, and developer workflow tools in one app.
+## Notes
+- The site is VitePress-generated and primarily serves markdown documentation, product pages, and policy pages.
+- The public documentation is intentionally concise so LLMs can use the linked pages as focused context rather than scraping the entire site.

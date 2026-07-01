@@ -16,7 +16,7 @@ hero:
     <div class="home-page-hero-copy">
       <p class="home-page-badge">Для iPhone и Android</p>
       <div class="home-page-logo-lockup">
-        <img src="/app_icon.png" alt="NimoteCode" class="home-page-logo">
+        <img src="/app_icon.png" alt="NimoteCode" class="home-page-logo" width="1024" height="1024" decoding="async">
         <span class="home-page-brand">NimoteCode</span>
       </div>
       <h1 class="home-page-title">Это не просто редактор кода.<br>Это реальное dev-workspace.</h1>
@@ -28,8 +28,8 @@ hero:
       </div>
     </div>
     <div class="home-page-store-showcase" aria-hidden="true">
-      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="" class="home-page-store-showcase-badge home-page-store-showcase-badge-google">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="" class="home-page-store-showcase-badge home-page-store-showcase-badge-apple">
+      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="" class="home-page-store-showcase-badge home-page-store-showcase-badge-google" width="320" height="96" loading="eager" decoding="async">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="" class="home-page-store-showcase-badge home-page-store-showcase-badge-apple" width="135" height="40" loading="eager" decoding="async">
     </div>
     <a href="#product-demo" class="home-page-scroll-hint">Смотреть демо</a>
   </div>
@@ -42,17 +42,27 @@ hero:
     <p class="home-page-section-copy">SSH-доступ, правка кода, terminal, Git-ревью и AI-помощь в одном непрерывном workspace.</p>
   </div>
   <div class="home-page-video">
-    <div class="home-page-video-shell">
-      <iframe
-        class="home-page-video-frame"
-        src="https://www.youtube.com/embed/cTpxPqJwo_s"
-        title="Демо продукта NimoteCode"
+    <a
+      class="home-page-video-shell home-page-video-link"
+      href="https://www.youtube.com/watch?v=cTpxPqJwo_s"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Посмотреть демонстрацию NimoteCode на YouTube"
+    >
+      <img
+        class="home-page-video-poster"
+        src="/screenshots/NimoteCode_Promotion.jpg"
+        alt="Предпросмотр демонстрации NimoteCode"
+        width="4096"
+        height="2304"
         loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </div>
+        decoding="async"
+      >
+      <span class="home-page-video-overlay">
+        <span class="home-page-video-play">Посмотреть демо на YouTube</span>
+        <span class="home-page-video-meta">Откроется лёгкий внешний плеер</span>
+      </span>
+    </a>
   </div>
 </section>
 
