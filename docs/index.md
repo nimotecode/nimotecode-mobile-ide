@@ -126,16 +126,6 @@ hero:
 </section>
 
 <section class="home-page-section">
-  <div class="home-page-section-head home-page-section-head-centered">
-    <p class="home-page-eyebrow">Pricing Preview</p>
-    <h2 class="home-page-section-title">Start free. Unlock the full mobile IDE with Pro.</h2>
-    <p class="home-page-section-copy">A focused comparison of the free foundation and the deeper workflows in Pro.</p>
-  </div>
-
-  <PricingFeatureSystem lang="en" mode="preview" />
-</section>
-
-<section class="home-page-section">
   <div class="home-page-cta">
     <p class="home-page-eyebrow">Get Started</p>
     <h2 class="home-page-cta-title">Carry a real development workspace everywhere.</h2>

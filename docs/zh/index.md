@@ -126,16 +126,6 @@ hero:
 </section>
 
 <section class="home-page-section">
-  <div class="home-page-section-head home-page-section-head-centered">
-    <p class="home-page-eyebrow">价格预览</p>
-    <h2 class="home-page-section-title">免费开始，Pro 解锁完整移动 IDE。</h2>
-    <p class="home-page-section-copy">快速比较免费基础能力和 Pro 提供的更深层工作流。</p>
-  </div>
-
-  <PricingFeatureSystem lang="zh" mode="preview" />
-</section>
-
-<section class="home-page-section">
   <div class="home-page-cta">
     <p class="home-page-eyebrow">开始使用</p>
     <h2 class="home-page-cta-title">把真实开发工作区随身带走。</h2>

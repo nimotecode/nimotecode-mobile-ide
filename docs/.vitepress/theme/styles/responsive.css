@@ -20,7 +20,7 @@
   .home-page-hero-shell {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
-    padding: 44px 24px 26px;
+    padding: 44px 20px 26px;
   }
   .home-page-hero-copy {
     text-align: center;
@@ -64,6 +64,16 @@
     --nimote-nav-height: 56px;
   }
 
+  .VPNav,
+  .VPNavBar {
+    z-index: calc(var(--vp-z-index-layout-top) + 20);
+  }
+  .VPNavBarHamburger {
+    min-width: 52px;
+    min-height: 52px;
+    touch-action: manipulation;
+  }
+
   .home-page-hero {
     padding: 0 0 18px;
     min-height: clamp(560px, 100svh - var(--nimote-nav-height), 760px);
@@ -80,7 +90,7 @@
   }
   .home-page-hero-grid,
   .home-page-hero-shell {
-    padding: 26px 20px 132px;
+    padding: 26px 16px 132px;
     gap: 16px;
     align-content: end;
   }
@@ -153,8 +163,8 @@
   }
 
   .home-page-section {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
     padding-top: 64px;
     padding-bottom: 64px;
   }
@@ -350,7 +360,7 @@
 @media (max-width: 420px) {
   .home-page-hero-grid,
   .home-page-hero-shell {
-    padding: 22px 14px 116px;
+    padding: 22px 12px 116px;
     gap: 16px;
   }
   .home-page-title {
@@ -389,13 +399,13 @@
   .VPNavBar .container,
   .home-page-section,
   .VPFooter .container {
-    padding-left: max(20px, env(safe-area-inset-left));
-    padding-right: max(20px, env(safe-area-inset-right));
+    padding-left: max(14px, env(safe-area-inset-left));
+    padding-right: max(14px, env(safe-area-inset-right));
   }
   .home-page-hero-grid,
   .home-page-hero-shell {
-    padding-left: max(20px, env(safe-area-inset-left));
-    padding-right: max(20px, env(safe-area-inset-right));
+    padding-left: max(14px, env(safe-area-inset-left));
+    padding-right: max(14px, env(safe-area-inset-right));
   }
 }
 

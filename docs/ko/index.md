@@ -126,16 +126,6 @@ hero:
 </section>
 
 <section class="home-page-section">
-  <div class="home-page-section-head home-page-section-head-centered">
-    <p class="home-page-eyebrow">가격 미리보기</p>
-    <h2 class="home-page-section-title">Free로 시작하고 Pro로 전체 모바일 IDE를 엽니다.</h2>
-    <p class="home-page-section-copy">무료 기반과 Pro의 더 깊은 워크플로를 집중해서 비교합니다.</p>
-  </div>
-
-  <PricingFeatureSystem lang="ko" mode="preview" />
-</section>
-
-<section class="home-page-section">
   <div class="home-page-cta">
     <p class="home-page-eyebrow">시작하기</p>
     <h2 class="home-page-cta-title">실제 개발 워크스페이스를 어디서나 들고 다니세요.</h2>

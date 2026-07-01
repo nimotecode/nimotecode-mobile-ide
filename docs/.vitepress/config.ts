@@ -33,6 +33,39 @@ function asContent(value: unknown, fallback: string): string {
   return fallback
 }
 
+function pageDescription(context: TransformContext, title: string): string {
+  const explicit = asContent(context.pageData.frontmatter.description, '')
+  if (explicit) return explicit
+
+  const normalizedTitle = title.trim()
+  if (!normalizedTitle || normalizedTitle === 'NimoteCode') {
+    return asContent(context.siteConfig.site.description, 'NimoteCode mobile developer workspace.')
+  }
+
+  return `${normalizedTitle} page on NimoteCode, the mobile-first developer workspace for SSH, terminal, Git, AI, debugging, tasks, timeline, and sync/cache workflows.`
+}
+
+function stripLocalePrefix(path: string): string {
+  return path.replace(/^\/(zh|ja|ko|ru|es)(?=\/|$)/, '') || '/'
+}
+
+function titleCase(value: string): string {
+  return value
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ')
+}
+
+function languageForPath(path: string): string {
+  const localeKey = pageLocaleKey(path)
+  if (localeKey === 'zh') return 'zh-CN'
+  if (localeKey === 'ja') return 'ja-JP'
+  if (localeKey === 'ko') return 'ko-KR'
+  if (localeKey === 'ru') return 'ru-RU'
+  if (localeKey === 'es') return 'es-ES'
+  return 'en-US'
+}
+
 function localeAlternates(path: string): HeadConfig[] {
   const normalized = normalizePath(path)
   const suffix = normalized === '/' ? '' : normalized
@@ -49,10 +82,8 @@ function localeAlternates(path: string): HeadConfig[] {
 function pageSchemas(context: TransformContext): object[] {
   const url = canonicalUrl(context.pageData.relativePath)
   const title = asContent(context.pageData.frontmatter.title, asContent(context.pageData.title, 'NimoteCode'))
-  const description = asContent(
-    context.pageData.frontmatter.description,
-    asContent(context.siteConfig.site.description, 'NimoteCode mobile developer workspace documentation.')
-  )
+  const description = pageDescription(context, title)
+  const inLanguage = languageForPath(context.pageData.relativePath)
 
   const schemas: object[] = [
     {
@@ -73,6 +104,14 @@ function pageSchemas(context: TransformContext): object[] {
       url: siteUrl,
       description: 'NimoteCode is a mobile-first IDE and developer workspace for SSH, terminal, Git, AI, debugging, and daily software delivery from iPhone, iPad, Android phones, and tablets.',
       inLanguage: 'en-US'
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: title,
+      description,
+      url,
+      inLanguage
     },
     {
       '@context': 'https://schema.org',
@@ -115,7 +154,130 @@ function pageSchemas(context: TransformContext): object[] {
     })
   }
 
+  const breadcrumb = breadcrumbSchema(context)
+  if (breadcrumb) {
+    schemas.push(breadcrumb)
+  }
+
+  const faq = faqSchema(context)
+  if (faq) {
+    schemas.push(faq)
+  }
+
   return schemas
+}
+
+function breadcrumbSchema(context: TransformContext): object | null {
+  const normalized = normalizePath(context.pageData.relativePath)
+  const localePrefix = normalized.match(/^\/(zh|ja|ko|ru|es)(?=\/|$)/)?.[0] ?? ''
+  const stripped = stripLocalePrefix(normalized)
+  if (stripped === '/') return null
+
+  const segments = stripped.split('/').filter(Boolean)
+  if (segments.length === 0) return null
+
+  const items = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: localePrefix ? `${siteUrl}${localePrefix}` : siteUrl
+    }
+  ]
+
+  let currentUrl = localePrefix ? `${siteUrl}${localePrefix}` : siteUrl
+  segments.forEach((segment, index) => {
+    currentUrl = `${currentUrl}/${segment}`
+    const isLast = index === segments.length - 1
+    const label = isLast ? asContent(context.pageData.title, titleCase(segment)) : titleCase(segment)
+
+    items.push({
+      '@type': 'ListItem',
+      position: index + 2,
+      name: label,
+      item: currentUrl
+    })
+  })
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items
+  }
+}
+
+function faqSchema(context: TransformContext): object | null {
+  const normalized = normalizePath(context.pageData.relativePath)
+  const faqEntries: Record<string, Array<{ question: string, answer: string }>> = {
+    '/docs/faq': [
+      {
+        question: 'Is NimoteCode only for remote development?',
+        answer: 'No. You can work in Local Explorer mode or Remote Explorer (SSH) mode.'
+      },
+      {
+        question: 'Which AI providers are supported?',
+        answer: 'Built-in templates include OpenAI, Anthropic, Gemini, Grok, DeepSeek, Zhipu, Moonshot, Ollama, and custom OpenAI-compatible endpoints.'
+      },
+      {
+        question: 'What can I do in Source Control?',
+        answer: 'You can stage, unstage, discard, commit, push, pull, fetch, manage branches and stashes, view history, and use Git AI analysis tools.'
+      },
+      {
+        question: 'Can I run project tasks?',
+        answer: 'Yes. Use the Tasks panel to create and run tasks, then inspect output in terminal.'
+      },
+      {
+        question: 'What is Timeline used for?',
+        answer: 'Timeline helps you inspect events and traces, including causal analysis flow for troubleshooting.'
+      },
+      {
+        question: 'Why is a feature locked?',
+        answer: 'Some capabilities are Pro-gated. Subscription status is verified by the app premium access flow.'
+      }
+    ],
+    '/zh/docs/faq': [
+      {
+        question: 'NimoteCode 只能远程开发吗？',
+        answer: '不是。支持 Local Explorer（本地）与 Remote Explorer（SSH）两种模式。'
+      },
+      {
+        question: '支持哪些 AI 提供商？',
+        answer: '内置模板包括 OpenAI、Anthropic、Gemini、Grok、DeepSeek、Zhipu、Moonshot、Ollama 以及自定义 OpenAI 兼容端点。'
+      },
+      {
+        question: 'Source Control 能做什么？',
+        answer: '支持暂存、取消暂存、丢弃、提交、推拉取、分支与 stash 管理、历史与 Git AI 分析。'
+      },
+      {
+        question: '可以运行项目任务吗？',
+        answer: '可以。使用 Tasks 面板创建并运行任务，输出可在终端查看。'
+      },
+      {
+        question: 'Timeline 有什么用？',
+        answer: '用于查看事件与 Trace，帮助定位问题与复盘执行链路。'
+      },
+      {
+        question: '为什么有些功能不可用？',
+        answer: '部分能力受 Pro 门控，需通过订阅状态校验。'
+      }
+    ]
+  }
+
+  const entries = faqEntries[normalized]
+  if (!entries) return null
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: entries.map((entry) => ({
+      '@type': 'Question',
+      name: entry.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: entry.answer
+      }
+    }))
+  }
 }
 
 // Load the primary UI font asynchronously so it never blocks first paint.
@@ -180,10 +342,7 @@ export default defineConfig({
   transformHead(context) {
     const url = canonicalUrl(context.pageData.relativePath)
     const title = asContent(context.pageData.frontmatter.title, asContent(context.pageData.title, 'NimoteCode'))
-    const description = asContent(
-      context.pageData.frontmatter.description,
-      asContent(context.siteConfig.site.description, 'NimoteCode mobile developer workspace.')
-    )
+    const description = pageDescription(context, title)
     const image = asContent(context.pageData.frontmatter.image, socialImage)
 
     return [

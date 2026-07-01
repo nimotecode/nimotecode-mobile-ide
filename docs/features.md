@@ -3,7 +3,7 @@ title: Features | NimoteCode
 description: Capability map for NimoteCode's SSH workspace, editor, terminal, Git, AI, LSP, debugger, tasks, timeline, search, and sync/cache workflows.
 ---
 
-# Features
+# NimoteCode Features
 
 NimoteCode combines the tools needed to work on real projects from mobile devices: workspace access, editing, terminal execution, Git, AI, diagnostics, automation, and sync/cache.
 

@@ -126,16 +126,6 @@ hero:
 </section>
 
 <section class="home-page-section">
-  <div class="home-page-section-head home-page-section-head-centered">
-    <p class="home-page-eyebrow">Предпросмотр цены</p>
-    <h2 class="home-page-section-title">Начните бесплатно. Pro открывает полную mobile IDE.</h2>
-    <p class="home-page-section-copy">Короткое сравнение бесплатной основы и более глубоких workflow в Pro.</p>
-  </div>
-
-  <PricingFeatureSystem lang="ru" mode="preview" />
-</section>
-
-<section class="home-page-section">
   <div class="home-page-cta">
     <p class="home-page-eyebrow">Начать</p>
     <h2 class="home-page-cta-title">Носите реальное dev-workspace с собой.</h2>

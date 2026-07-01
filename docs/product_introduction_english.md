@@ -1,3 +1,8 @@
+---
+title: NimoteCode Product Introduction
+description: Discover NimoteCode as a mobile AI coding workspace for SSH development, terminal workflows, Git review, debugging, and delivery on phones and tablets.
+---
+
 # NimoteCode Product Introduction
 
 【One-sentence Positioning】

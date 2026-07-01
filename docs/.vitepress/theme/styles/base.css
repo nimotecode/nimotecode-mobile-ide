@@ -37,7 +37,17 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100vh;
-  transition: background-color 0.3s var(--nimote-ease), color 0.3s var(--nimote-ease);
+  transition: background-color 0.18s var(--nimote-ease), color 0.18s var(--nimote-ease);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background-attachment: scroll;
+  }
 }
 
 img,

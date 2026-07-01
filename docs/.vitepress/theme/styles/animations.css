@@ -42,6 +42,10 @@
   animation-delay: 0.1s;
 }
 
+.VPHome .vp-doc {
+  animation: none;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -51,5 +55,12 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .VPHero,
+  .vp-doc {
+    animation: none;
   }
 }

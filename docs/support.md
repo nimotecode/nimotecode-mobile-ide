@@ -1,8 +1,9 @@
 ---
 title: Support | NimoteCode
+description: Get support for NimoteCode through email, GitHub issues, documentation, and troubleshooting guides.
 ---
 
-# Support
+# NimoteCode Support Center
 
 Need help with NimoteCode? We're here to assist you.
 

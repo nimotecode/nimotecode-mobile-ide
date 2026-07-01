@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy | NimoteCode
+description: Read how NimoteCode handles account data, subscriptions, workspace settings, AI configuration, diagnostics, and third-party integrations.
 ---
 
 # Privacy Policy

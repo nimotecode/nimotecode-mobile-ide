@@ -126,16 +126,6 @@ hero:
 </section>
 
 <section class="home-page-section">
-  <div class="home-page-section-head home-page-section-head-centered">
-    <p class="home-page-eyebrow">Vista previa de precio</p>
-    <h2 class="home-page-section-title">Empieza gratis. Pro desbloquea la IDE móvil completa.</h2>
-    <p class="home-page-section-copy">Una comparación enfocada entre la base gratuita y los flujos profundos de Pro.</p>
-  </div>
-
-  <PricingFeatureSystem lang="es" mode="preview" />
-</section>
-
-<section class="home-page-section">
   <div class="home-page-cta">
     <p class="home-page-eyebrow">Empezar</p>
     <h2 class="home-page-cta-title">Lleva un workspace real de desarrollo a todas partes.</h2>

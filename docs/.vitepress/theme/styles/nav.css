@@ -12,12 +12,13 @@
 .VPNav,
 .VPNavBar,
 .VPNavBar.has-sidebar {
+  position: relative;
+  z-index: calc(var(--vp-z-index-layout-top) + 20);
   background: rgba(var(--nimote-bg-rgb), 0.72) !important;
   backdrop-filter: saturate(180%) blur(24px);
   -webkit-backdrop-filter: saturate(180%) blur(24px);
   border-bottom: 1px solid var(--nimote-border);
-  transition: background-color 0.3s var(--nimote-ease), box-shadow 0.3s var(--nimote-ease),
-    border-color 0.3s var(--nimote-ease);
+  transition: background-color 0.18s var(--nimote-ease), border-color 0.18s var(--nimote-ease);
 }
 
 .VPNav.scrolled {
@@ -30,6 +31,8 @@
 .VPNavBar .content-body,
 .VPNavBar .divider,
 .VPNavBar .curtain {
+  position: relative;
+  z-index: 1;
   background: transparent !important;
 }
 
@@ -90,6 +93,8 @@
 /* Search */
 .VPNavBarSearch {
   border-radius: var(--nimote-radius-md);
+  position: relative;
+  z-index: 2;
 }
 .VPNavBarSearch .DocSearch-Button {
   background: var(--nimote-bg-subtle);
@@ -212,4 +217,14 @@
   font-weight: 600;
   background: var(--nimote-bg-subtle);
   border-left-color: var(--nimote-accent);
+}
+
+.VPNavBarHamburger,
+.VPNavBarTranslations,
+.VPNavBarAppearance,
+.VPNavBarExtra,
+.VPNavBarSocialLinks {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
 }

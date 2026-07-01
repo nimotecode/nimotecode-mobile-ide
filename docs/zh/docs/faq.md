@@ -1,3 +1,8 @@
+---
+title: 常见问题 | NimoteCode
+description: 查看 NimoteCode 的常见问题，包括远程开发、AI 提供商、Source Control、Tasks、Timeline 和 Pro 功能。
+---
+
 # FAQ
 
 ## NimoteCode 只能远程开发吗？

@@ -126,16 +126,6 @@ hero:
 </section>
 
 <section class="home-page-section">
-  <div class="home-page-section-head home-page-section-head-centered">
-    <p class="home-page-eyebrow">価格プレビュー</p>
-    <h2 class="home-page-section-title">Free で始めて、Pro で完全なモバイル IDE を解放。</h2>
-    <p class="home-page-section-copy">無料の基礎機能と、Pro で広がる実務向けフローを絞って比較できます。</p>
-  </div>
-
-  <PricingFeatureSystem lang="ja" mode="preview" />
-</section>
-
-<section class="home-page-section">
   <div class="home-page-cta">
     <p class="home-page-eyebrow">はじめる</p>
     <h2 class="home-page-cta-title">本物の開発ワークスペースを持ち歩く。</h2>

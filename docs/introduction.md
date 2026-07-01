@@ -1,8 +1,9 @@
 ---
 title: Introduction | NimoteCode
+description: Learn how NimoteCode combines SSH, terminal, Git, AI, LSP, debugging, tasks, and timeline workflows into a mobile-first IDE.
 ---
 
-# Introduction
+# NimoteCode Introduction
 
 **AI-Powered Mobile SSH IDE for Real Development Workflows**
 

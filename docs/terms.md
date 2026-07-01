@@ -1,5 +1,6 @@
 ---
 title: Terms of Service | NimoteCode
+description: Review the NimoteCode terms covering subscriptions, AI features, remote systems, user responsibility, privacy, and service usage.
 ---
 
 # Terms of Service

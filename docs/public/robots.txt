@@ -1,5 +1,12 @@
 User-agent: *
 Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
 Host: nimotecode.com
 
 Sitemap: https://nimotecode.com/sitemap.xml

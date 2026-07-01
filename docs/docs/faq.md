@@ -1,4 +1,9 @@
-# FAQ
+---
+title: FAQ | NimoteCode
+description: Find answers to common NimoteCode questions about remote development, AI providers, Source Control, Tasks, Timeline, and Pro access.
+---
+
+# NimoteCode FAQ
 
 ## Is NimoteCode only for remote development?
 

@@ -3,7 +3,7 @@ title: Download | NimoteCode
 description: Download NimoteCode and start with a mobile SSH workspace, code editor, terminal, AI Chat, and Pro upgrade paths.
 ---
 
-# Download
+# Download NimoteCode
 
 Download NimoteCode to open a local or SSH workspace, edit files, run commands, and use AI assistance from a mobile device.
 

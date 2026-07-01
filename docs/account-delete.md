@@ -1,5 +1,6 @@
 ---
 title: Account Deletion | NimoteCode
+description: Learn how to delete your NimoteCode account and associated cloud data from the app or by requesting support.
 ---
 
 # Account Deletion
@@ -40,4 +41,3 @@ Local workspace files, remote server files, and data stored on your own infrastr
 ## Processing Time
 
 We process verified deletion requests as soon as reasonably possible, subject to legal, security, anti-fraud, and dispute-handling obligations.
-

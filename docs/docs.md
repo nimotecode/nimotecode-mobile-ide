@@ -1,9 +1,9 @@
 ---
-title: Documentation | NimoteCode
-description: Explore NimoteCode documentation for mobile IDE workflows including SSH development, terminal usage, Git, AI assistant, LSP, debugging, tasks, timeline, and sync/cache.
+title: Documentation Hub | NimoteCode
+description: Explore NimoteCode documentation for mobile IDE workflows, including SSH development, terminal usage, Git, AI assistant, LSP, debugging, tasks, timeline, and sync/cache.
 ---
 
-# Documentation
+# NimoteCode Documentation Hub
 
 Welcome to the NimoteCode documentation hub. Everything you need to get started and master mobile development with a real mobile IDE.
 
